@@ -685,7 +685,51 @@
       </div>
     </section>
 
-    <!-- 4. DYNAMIC PRODUCT SHOWCASE -->
+    <!-- 3B. BEST SELLING (FEATURED PRODUCTS) SHOWCASE -->
+    <section id="bestselling-section" class="py-10 sm:py-12 bg-gradient-to-b from-[#FFFDF2] via-[#FFF9DB]/50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <span class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-2 border border-amber-200">
+              <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z" fill="#F59E0B"/></svg>
+              <span id="bestselling-badge-text">TOP PICKS</span>
+            </span>
+            <h2 id="bestselling-heading" class="brand-font text-2xl sm:text-4xl font-black text-[#16325C]">Best Selling Learning Packs</h2>
+            <p id="bestselling-subheading" class="text-xs sm:text-sm font-bold text-gray-500 mt-1">Parent-favorite printable bundles &amp; interactive kids apps</p>
+          </div>
+          <a href="#products-showcase" class="text-xs sm:text-sm font-black text-[#0E7AE6] hover:underline inline-flex items-center gap-1.5">
+            <span>Browse Full Catalog</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div id="bestselling-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Rendered dynamically by renderFeaturedSections() -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3C. WHAT'S NEW SHOWCASE -->
+    <section id="whatsnew-section" class="py-10 sm:py-12 bg-gradient-to-b from-[#F0F8FF]/70 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <span class="inline-flex items-center gap-1.5 bg-pink-100 text-[#FF4D6D] px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-2 border border-pink-200">
+              <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M12 2C12 8 16 12 22 12C16 12 12 16 12 22C12 16 8 12 2 12C8 12 12 8 12 2Z" fill="#FF4D6D"/></svg>
+              <span id="whatsnew-badge-text">FRESH ARRIVALS</span>
+            </span>
+            <h2 id="whatsnew-heading" class="brand-font text-2xl sm:text-4xl font-black text-[#16325C]">What's New in Kinder Klub</h2>
+            <p id="whatsnew-subheading" class="text-xs sm:text-sm font-bold text-gray-500 mt-1">Newly released worksheets, games &amp; busy packs</p>
+          </div>
+        </div>
+
+        <div id="whatsnew-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Rendered dynamically by renderFeaturedSections() -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ALL PRODUCTS SHOWCASE -->
     <section id="products-showcase" class="py-12 sm:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
 
@@ -695,7 +739,7 @@
               <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M12 2C12 8 16 12 22 12C16 12 12 16 12 22C12 16 8 12 2 12C8 12 12 8 12 2Z" fill="#0E7AE6"/></svg>
               <span id="products-badge-text">Digital Library &amp; Apps</span>
             </span>
-            <h2 id="products-heading" class="brand-font text-3xl sm:text-4xl font-black text-[#16325C]">Featured Kids Learning Packs</h2>
+            <h2 id="products-heading" class="brand-font text-3xl sm:text-4xl font-black text-[#16325C]">All Kids Learning Packs</h2>
           </div>
 
           <!-- Category Filter Pills + Search -->
@@ -1118,7 +1162,7 @@
             </div>
             <div>
               <h2 class="brand-font text-lg sm:text-2xl font-black leading-tight">Kinder Klub Store Manager</h2>
-              <p class="text-[11px] sm:text-xs text-white/80 font-semibold">Urus produk, kategori, background, warna HEX &amp; Firebase Cloud</p>
+              <p class="text-[11px] sm:text-xs text-white/80 font-semibold">Urus susunan produk, Best Selling, What's New, kategori &amp; Firebase Cloud</p>
             </div>
           </div>
 
@@ -1143,6 +1187,11 @@
               <span>Overview</span>
             </button>
 
+            <button onclick="switchAdminTab('tab-products')" id="nav-tab-products" class="whitespace-nowrap shrink-0 md:w-full text-left px-3.5 py-2.5 rounded-xl flex items-center space-x-2 text-gray-700 hover:bg-purple-100 transition-all">
+              <i class="fa-solid fa-box-open w-4 text-brand-sky"></i>
+              <span>Products &amp; Susunan (↑↓)</span>
+            </button>
+
             <button onclick="switchAdminTab('tab-theme-customizer')" id="nav-tab-theme-customizer" class="whitespace-nowrap shrink-0 md:w-full text-left px-3.5 py-2.5 rounded-xl flex items-center space-x-2 text-gray-700 hover:bg-purple-100 transition-all">
               <i class="fa-solid fa-palette w-4 text-brand-coral"></i>
               <span>UI, Border, Background &amp; HEX</span>
@@ -1151,11 +1200,6 @@
             <button onclick="switchAdminTab('tab-copywriting')" id="nav-tab-copywriting" class="whitespace-nowrap shrink-0 md:w-full text-left px-3.5 py-2.5 rounded-xl flex items-center space-x-2 text-gray-700 hover:bg-purple-100 transition-all">
               <i class="fa-solid fa-pen-to-square w-4 text-emerald-600"></i>
               <span>Edit Semua Ayat Website</span>
-            </button>
-
-            <button onclick="switchAdminTab('tab-products')" id="nav-tab-products" class="whitespace-nowrap shrink-0 md:w-full text-left px-3.5 py-2.5 rounded-xl flex items-center space-x-2 text-gray-700 hover:bg-purple-100 transition-all">
-              <i class="fa-solid fa-box-open w-4 text-brand-sky"></i>
-              <span>Products (CRUD)</span>
             </button>
 
             <button onclick="switchAdminTab('tab-carousel-manager')" id="nav-tab-carousel-manager" class="whitespace-nowrap shrink-0 md:w-full text-left px-3.5 py-2.5 rounded-xl flex items-center space-x-2 text-gray-700 hover:bg-purple-100 transition-all">
@@ -1431,7 +1475,7 @@
             <div id="tab-copywriting" class="hidden space-y-6">
               <div>
                 <h3 class="brand-font text-xl font-black text-brand-dark">Edit Semua Ayat &amp; Teks Website</h3>
-                <p class="text-xs text-gray-500">Ubah mana-mana tajuk, lencana <strong>SPECIAL OFFER</strong>, butang, ulasan ibu bapa, atau soalan FAQ di bawah dan tekan Simpan.</p>
+                <p class="text-xs text-gray-500">Ubah mana-mana tajuk, lencana <strong>SPECIAL OFFER</strong>, tajuk <strong>Best Selling &amp; What's New</strong>, butang, ulasan ibu bapa, atau soalan FAQ di bawah dan tekan Simpan.</p>
               </div>
 
               <!-- 1. Bar Pengumuman Atas -->
@@ -1530,9 +1574,9 @@
                 </div>
               </div>
 
-              <!-- 4. Tajuk Seksyen Kategori, Aktiviti & Produk -->
+              <!-- 4. Tajuk Seksyen Kategori, Best Selling, What's New & Produk -->
               <div class="bg-purple-50/60 p-4 rounded-2xl border-2 border-purple-200 space-y-3 text-xs">
-                <div class="font-black uppercase text-brand-purple">4. Tajuk Seksyen Kategori, Aktiviti &amp; Produk</div>
+                <div class="font-black uppercase text-brand-purple">4. Tajuk Seksyen Kategori, Best Selling, What's New &amp; Produk</div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label class="block font-bold mb-1">Tajuk Seksyen Kategori</label>
@@ -1574,12 +1618,40 @@
                     </div>
                   </div>
 
+                  <!-- Best Selling Titles -->
                   <div>
-                    <label class="block font-bold mb-1">Lencana Atas Produk</label>
+                    <label class="block font-bold mb-1">Lencana Best Selling</label>
+                    <input type="text" id="copy-bestselling-badge" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Tajuk Bahagian Best Selling</label>
+                    <input type="text" id="copy-bestselling-heading" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block font-bold mb-1">Sub-tajuk Bahagian Best Selling</label>
+                    <input type="text" id="copy-bestselling-sub" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+
+                  <!-- What's New Titles -->
+                  <div>
+                    <label class="block font-bold mb-1">Lencana What's New</label>
+                    <input type="text" id="copy-whatsnew-badge" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Tajuk Bahagian What's New</label>
+                    <input type="text" id="copy-whatsnew-heading" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block font-bold mb-1">Sub-tajuk Bahagian What's New</label>
+                    <input type="text" id="copy-whatsnew-sub" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+
+                  <div>
+                    <label class="block font-bold mb-1">Lencana Atas Semua Produk</label>
                     <input type="text" id="copy-prod-badge" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
                   </div>
                   <div>
-                    <label class="block font-bold mb-1">Tajuk Seksyen Produk</label>
+                    <label class="block font-bold mb-1">Tajuk Seksyen Semua Produk</label>
                     <input type="text" id="copy-prod-heading" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
                   </div>
                   <div>
@@ -1650,11 +1722,14 @@
               </button>
             </div>
 
-            <!-- TAB 4: PRODUCTS CRUD -->
+            <!-- TAB 4: PRODUCTS CRUD + REORDER ARROWS + BEST SELLING / WHAT'S NEW -->
             <div id="tab-products" class="hidden space-y-5">
-              <div class="flex items-center justify-between gap-2">
-                <h3 class="brand-font text-xl font-black text-brand-dark">Pengurusan Produk</h3>
-                <button onclick="openProductEditForm(null)" class="btn-3d px-4 py-2.5 bg-brand-coral text-white rounded-xl text-xs font-black">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h3 class="brand-font text-xl font-black text-brand-dark">Pengurusan &amp; Susunan Produk</h3>
+                  <p class="text-xs text-gray-500">Gunakan anak panah <strong>↑ / ↓</strong> di sebelah kanan untuk susun urutan produk, atau klik pil <strong>Best Selling</strong> &amp; <strong>What's New</strong> untuk paparkan di seksyen khas laman utama.</p>
+                </div>
+                <button onclick="openProductEditForm(null)" class="btn-3d px-4 py-2.5 bg-brand-coral text-white rounded-xl text-xs font-black shrink-0">
                   <i class="fa-solid fa-plus mr-1"></i> Tambah Produk Baru
                 </button>
               </div>
@@ -1692,6 +1767,19 @@
                     <label class="block font-bold mb-1">Lencana (Badge)</label>
                     <input type="text" id="edit-prod-badge" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" placeholder="BESTSELLER / NEW" />
                   </div>
+
+                  <!-- Showcase Placement Checkboxes -->
+                  <div class="sm:col-span-2 bg-white p-3 rounded-xl border border-purple-200 flex flex-wrap items-center gap-4">
+                    <label class="inline-flex items-center space-x-2 cursor-pointer font-extrabold text-amber-800">
+                      <input type="checkbox" id="edit-prod-bestselling" class="w-4 h-4 accent-amber-500 rounded" />
+                      <span><i class="fa-solid fa-star text-amber-500 mr-1"></i> Papar di Bahagian Best Selling (Featured)</span>
+                    </label>
+                    <label class="inline-flex items-center space-x-2 cursor-pointer font-extrabold text-pink-700">
+                      <input type="checkbox" id="edit-prod-whatsnew" class="w-4 h-4 accent-pink-500 rounded" />
+                      <span><i class="fa-solid fa-sparkles text-pink-500 mr-1"></i> Papar di Bahagian What's New</span>
+                    </label>
+                  </div>
+
                   <div class="sm:col-span-2">
                     <label class="block font-bold mb-1">Gambar Muka Depan (Cover Image — Upload atau URL)</label>
                     <div class="flex gap-2">
@@ -1744,7 +1832,7 @@
                 </div>
               </div>
 
-              <!-- Products List -->
+              <!-- Products List with Up/Down Reorder Arrows & Best Selling / What's New Pills -->
               <div id="admin-products-list" class="space-y-2.5">
                 <!-- Rendered dynamically -->
               </div>
@@ -1824,7 +1912,7 @@
             <div id="tab-sections" class="hidden space-y-5">
               <div>
                 <h3 class="brand-font text-xl font-black text-brand-dark">Seksyen Halaman Utama</h3>
-                <p class="text-xs text-gray-500">Kawal bahagian mana yang dipaparkan atau disembunyikan pada laman utama kedai anda (termasuk Kotak Gambar Banner Hero).</p>
+                <p class="text-xs text-gray-500">Kawal bahagian mana yang dipaparkan atau disembunyikan pada laman utama kedai anda (termasuk Kotak Gambar Banner Hero, Best Selling &amp; What's New).</p>
               </div>
               <div id="admin-sections-list" class="space-y-2">
                 <!-- Rendered dynamically -->
@@ -2183,6 +2271,7 @@ service cloud.firestore {
 
         const currentStore = window.getStoreData();
         currentStore.products = loadedProducts;
+        window.renderFeaturedSections();
         window.renderProducts();
         window.renderAdminProductsTable();
         window.updateAdminDashboardStats();
@@ -2374,8 +2463,14 @@ service cloud.firestore {
         actCircle2: "Busy Books",
         actCircle3: "Math & Play",
         actCircle4: "Story & Apps",
+        bestSellingBadge: "TOP PICKS",
+        bestSellingHeading: "Best Selling Learning Packs",
+        bestSellingSubheading: "Parent-favorite printable bundles & interactive kids apps",
+        whatsNewBadge: "FRESH ARRIVALS",
+        whatsNewHeading: "What's New in Kinder Klub",
+        whatsNewSubheading: "Newly released worksheets, games & busy packs",
         productsBadge: "Digital Library & Apps",
-        productsHeading: "Featured Kids Learning Packs",
+        productsHeading: "All Kids Learning Packs",
         productsSearchPlaceholder: "Search worksheets, phonics...",
         productCardButton: "VIEW PRODUCT",
         testimonialsBadge: "Parent Love",
@@ -2399,9 +2494,10 @@ service cloud.firestore {
       },
       navigation: [
         { id: "nav-home", label: "Home", href: "#home", visible: true },
+        { id: "nav-bestselling", label: "Best Selling", href: "#bestselling-section", visible: true },
+        { id: "nav-whatsnew", label: "What's New", href: "#whatsnew-section", visible: true },
         { id: "nav-products", label: "All Products", href: "#products-showcase", visible: true },
         { id: "nav-categories", label: "Categories", href: "#categories-section", visible: true },
-        { id: "nav-promotions", label: "Special Offers", href: "#bundle-deals", visible: false },
         { id: "nav-reviews", label: "Parent Reviews", href: "#testimonials-section", visible: true },
         { id: "nav-faq", label: "FAQ", href: "#faq-section", visible: true }
       ],
@@ -2416,8 +2512,10 @@ service cloud.firestore {
       sections: [
         { id: "sec-hero", name: "Hero Welcome Banner", visible: true },
         { id: "sec-categories", name: "Learning Categories Grid", visible: true },
-        { id: "sec-products", name: "Featured Products Showcase", visible: true },
         { id: "sec-promotions", name: "Super Bundle Promo Banner", visible: true },
+        { id: "sec-bestselling", name: "Best Selling (Featured Products)", visible: true },
+        { id: "sec-whatsnew", name: "What's New Showcase", visible: true },
+        { id: "sec-products", name: "All Products Showcase", visible: true },
         { id: "sec-duitnow", name: "DuitNow & Instant Delivery Info", visible: true },
         { id: "sec-testimonials", name: "Parent Reviews & Testimonials", visible: true },
         { id: "sec-faq", name: "FAQ Accordion", visible: true }
@@ -2432,6 +2530,8 @@ service cloud.firestore {
           promoPrice: 25.00,
           ageGroup: "Ages 3-7",
           badge: "BESTSELLER",
+          isBestSelling: true,
+          isWhatsNew: false,
           shortDesc: "140+ interactive phonics worksheets, sound blending games & printable mini storybooks.",
           fullDesc: "Help your child read with confidence! This complete digital phonics bundle includes letter sound flashcards, CVC word builders, tracing sheets, and interactive audio-guided reading cards.",
           coverImage: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=85",
@@ -2458,6 +2558,8 @@ service cloud.firestore {
           promoPrice: 29.00,
           ageGroup: "Ages 2-5",
           badge: "HOT DEAL",
+          isBestSelling: true,
+          isWhatsNew: false,
           shortDesc: "Cut-and-paste Velcro quiet book activities covering colors, shapes, animals & numbers.",
           fullDesc: "Keep little hands busy and screen-free! Print, laminate, and attach Velcro dots to create a reusable quiet binder filled with matching puzzles, sorting mats, and fine motor challenges.",
           coverImage: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=700&q=85",
@@ -2484,6 +2586,8 @@ service cloud.firestore {
           promoPrice: 22.00,
           ageGroup: "Ages 4-8",
           badge: "NEW",
+          isBestSelling: false,
+          isWhatsNew: true,
           shortDesc: "Visual addition, subtraction, number bonds & fun logic puzzles for young learners.",
           fullDesc: "Turn math anxiety into excitement! Includes browser-based interactive number games for tablets plus 110 printable practice sheets with cute colorful illustrations.",
           coverImage: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=700&q=85",
@@ -2923,6 +3027,7 @@ service cloud.firestore {
       applyAllCopywriting();
       renderNavigation();
       renderCategories();
+      renderFeaturedSections();
       renderProducts();
       renderTestimonials();
       renderFaqs();
@@ -2969,6 +3074,14 @@ service cloud.firestore {
       setText('act-circle-2', c.actCircle2);
       setText('act-circle-3', c.actCircle3);
       setText('act-circle-4', c.actCircle4);
+
+      setText('bestselling-badge-text', c.bestSellingBadge);
+      setText('bestselling-heading', c.bestSellingHeading);
+      setText('bestselling-subheading', c.bestSellingSubheading);
+
+      setText('whatsnew-badge-text', c.whatsNewBadge);
+      setText('whatsnew-heading', c.whatsNewHeading);
+      setText('whatsnew-subheading', c.whatsNewSubheading);
 
       setText('products-badge-text', c.productsBadge);
       setText('products-heading', c.productsHeading);
@@ -3031,6 +3144,14 @@ service cloud.firestore {
       document.getElementById('copy-circle-2').value = c.actCircle2 || "";
       document.getElementById('copy-circle-3').value = c.actCircle3 || "";
       document.getElementById('copy-circle-4').value = c.actCircle4 || "";
+
+      document.getElementById('copy-bestselling-badge').value = c.bestSellingBadge || "";
+      document.getElementById('copy-bestselling-heading').value = c.bestSellingHeading || "";
+      document.getElementById('copy-bestselling-sub').value = c.bestSellingSubheading || "";
+
+      document.getElementById('copy-whatsnew-badge').value = c.whatsNewBadge || "";
+      document.getElementById('copy-whatsnew-heading').value = c.whatsNewHeading || "";
+      document.getElementById('copy-whatsnew-sub').value = c.whatsNewSubheading || "";
 
       document.getElementById('copy-prod-badge').value = c.productsBadge || "";
       document.getElementById('copy-prod-heading').value = c.productsHeading || "";
@@ -3121,6 +3242,12 @@ service cloud.firestore {
         actCircle2: document.getElementById('copy-circle-2').value.trim(),
         actCircle3: document.getElementById('copy-circle-3').value.trim(),
         actCircle4: document.getElementById('copy-circle-4').value.trim(),
+        bestSellingBadge: document.getElementById('copy-bestselling-badge').value.trim() || "TOP PICKS",
+        bestSellingHeading: document.getElementById('copy-bestselling-heading').value.trim() || "Best Selling Learning Packs",
+        bestSellingSubheading: document.getElementById('copy-bestselling-sub').value.trim(),
+        whatsNewBadge: document.getElementById('copy-whatsnew-badge').value.trim() || "FRESH ARRIVALS",
+        whatsNewHeading: document.getElementById('copy-whatsnew-heading').value.trim() || "What's New in Kinder Klub",
+        whatsNewSubheading: document.getElementById('copy-whatsnew-sub').value.trim(),
         productsBadge: document.getElementById('copy-prod-badge').value.trim(),
         productsHeading: document.getElementById('copy-prod-heading').value.trim(),
         productCardButton: document.getElementById('copy-prod-btn').value.trim() || "VIEW PRODUCT",
@@ -3201,8 +3328,10 @@ service cloud.firestore {
       const sectionDomMap = {
         'sec-hero': 'home',
         'sec-categories': 'categories-section',
-        'sec-products': 'products-showcase',
         'sec-promotions': 'bundle-deals',
+        'sec-bestselling': 'bestselling-section',
+        'sec-whatsnew': 'whatsnew-section',
+        'sec-products': 'products-showcase',
         'sec-duitnow': 'duitnow-info-section',
         'sec-testimonials': 'testimonials-section',
         'sec-faq': 'faq-section'
@@ -3310,6 +3439,101 @@ service cloud.firestore {
       `;
     }
 
+    function buildProductCardHtml(prod, forcedBadge = null) {
+      const cardBtnText = (storeData.copy && storeData.copy.productCardButton) || "VIEW PRODUCT";
+      const discount = prod.originalPrice > prod.promoPrice
+        ? Math.round(((prod.originalPrice - prod.promoPrice) / prod.originalPrice) * 100)
+        : 0;
+      const catObj = storeData.categories.find(c => c.id === prod.category);
+      const displayCatName = catObj ? catObj.name : (prod.categoryName || 'Learning Pack');
+      const badgeLabel = forcedBadge || prod.badge;
+
+      return `
+        <div class="kk-product-card overflow-hidden flex flex-col justify-between">
+          <div>
+            <div onclick="openProductDetailModal('${prod.id}')" class="relative h-56 bg-amber-50 overflow-hidden cursor-pointer group">
+              <img src="${prod.coverImage}" alt="${prod.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              ${badgeLabel ? `
+                <span class="absolute top-3 left-3 bg-brand-yellow text-brand-dark px-3 py-1 rounded-full text-[11px] font-black uppercase shadow-md inline-flex items-center gap-1">
+                  <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z" fill="#FF6F00"/></svg>
+                  <span>${badgeLabel}</span>
+                </span>
+              ` : ''}
+              ${discount > 0 ? `
+                <span class="absolute top-3 right-3 bg-brand-coral text-white px-2.5 py-1 rounded-full text-[11px] font-black shadow-md">
+                  -${discount}% OFF
+                </span>
+              ` : ''}
+              <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs text-brand-purple px-3 py-1 rounded-full text-[11px] font-extrabold shadow-xs">
+                ${prod.ageGroup || 'Ages 3-7'}
+              </span>
+            </div>
+
+            <div class="p-5 space-y-2.5">
+              <div class="flex items-center justify-between text-[11px] font-extrabold text-brand-purple uppercase tracking-wider">
+                <span>${displayCatName}</span>
+                <span class="text-amber-500"><i class="fa-solid fa-star"></i> ${prod.rating || '5.0'}</span>
+              </div>
+
+              <h3 onclick="openProductDetailModal('${prod.id}')" class="brand-font text-xl font-black text-brand-dark leading-snug cursor-pointer hover:text-brand-coral transition-colors">
+                ${prod.title}
+              </h3>
+
+              <p class="text-xs font-semibold text-gray-600 line-clamp-2 leading-relaxed">
+                ${prod.shortDesc}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-5 pb-5 pt-2 flex items-center justify-between gap-3 border-t border-gray-100">
+            <div>
+              ${prod.originalPrice > prod.promoPrice ? `
+                <div class="text-xs font-bold text-gray-400 line-through">RM ${Number(prod.originalPrice).toFixed(2)}</div>
+              ` : ''}
+              <div class="brand-font text-xl font-black text-brand-coral">RM ${Number(prod.promoPrice).toFixed(2)}</div>
+            </div>
+
+            <button onclick="openProductDetailModal('${prod.id}')" class="kk-custom-btn">
+              <span>${cardBtnText}</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderFeaturedSections() {
+      const bestSec = document.getElementById('bestselling-section');
+      const bestGrid = document.getElementById('bestselling-products-grid');
+      const newSec = document.getElementById('whatsnew-section');
+      const newGrid = document.getElementById('whatsnew-products-grid');
+
+      const secBestCfg = (storeData.sections || []).find(s => s.id === 'sec-bestselling');
+      const secNewCfg = (storeData.sections || []).find(s => s.id === 'sec-whatsnew');
+
+      const bestProducts = (storeData.products || []).filter(p => p.published !== false && p.isBestSelling === true);
+      const newProducts = (storeData.products || []).filter(p => p.published !== false && p.isWhatsNew === true);
+
+      if (bestSec && bestGrid) {
+        if (secBestCfg && secBestCfg.visible === false || bestProducts.length === 0) {
+          bestSec.style.display = 'none';
+        } else {
+          bestSec.style.display = '';
+          bestGrid.innerHTML = bestProducts.map(p => buildProductCardHtml(p, p.badge || 'BESTSELLER')).join('');
+        }
+      }
+
+      if (newSec && newGrid) {
+        if (secNewCfg && secNewCfg.visible === false || newProducts.length === 0) {
+          newSec.style.display = 'none';
+        } else {
+          newSec.style.display = '';
+          newGrid.innerHTML = newProducts.map(p => buildProductCardHtml(p, p.badge || 'NEW')).join('');
+        }
+      }
+    }
+    window.renderFeaturedSections = renderFeaturedSections;
+
     function sendQuickWhatsAppInquiry() {
       const parentName = document.getElementById('quick-parent-name')?.value.trim() || "Parent";
       const childAge = document.getElementById('quick-child-age')?.value.trim() || "2-6 tahun";
@@ -3373,68 +3597,7 @@ service cloud.firestore {
         container.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6";
       }
 
-      const cardBtnText = (storeData.copy && storeData.copy.productCardButton) || "VIEW PRODUCT";
-
-      container.innerHTML = filtered.map(prod => {
-        const discount = prod.originalPrice > prod.promoPrice
-          ? Math.round(((prod.originalPrice - prod.promoPrice) / prod.originalPrice) * 100)
-          : 0;
-        const catObj = storeData.categories.find(c => c.id === prod.category);
-        const displayCatName = catObj ? catObj.name : (prod.categoryName || 'Learning Pack');
-
-        return `
-          <div class="kk-product-card overflow-hidden flex flex-col justify-between">
-            <div>
-              <div onclick="openProductDetailModal('${prod.id}')" class="relative h-56 bg-amber-50 overflow-hidden cursor-pointer group">
-                <img src="${prod.coverImage}" alt="${prod.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                ${prod.badge ? `
-                  <span class="absolute top-3 left-3 bg-brand-yellow text-brand-dark px-3 py-1 rounded-full text-[11px] font-black uppercase shadow-md inline-flex items-center gap-1">
-                    <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z" fill="#FF6F00"/></svg>
-                    <span>${prod.badge}</span>
-                  </span>
-                ` : ''}
-                ${discount > 0 ? `
-                  <span class="absolute top-3 right-3 bg-brand-coral text-white px-2.5 py-1 rounded-full text-[11px] font-black shadow-md">
-                    -${discount}% OFF
-                  </span>
-                ` : ''}
-                <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-xs text-brand-purple px-3 py-1 rounded-full text-[11px] font-extrabold shadow-xs">
-                  ${prod.ageGroup || 'Ages 3-7'}
-                </span>
-              </div>
-
-              <div class="p-5 space-y-2.5">
-                <div class="flex items-center justify-between text-[11px] font-extrabold text-brand-purple uppercase tracking-wider">
-                  <span>${displayCatName}</span>
-                  <span class="text-amber-500"><i class="fa-solid fa-star"></i> ${prod.rating || '5.0'}</span>
-                </div>
-
-                <h3 onclick="openProductDetailModal('${prod.id}')" class="brand-font text-xl font-black text-brand-dark leading-snug cursor-pointer hover:text-brand-coral transition-colors">
-                  ${prod.title}
-                </h3>
-
-                <p class="text-xs font-semibold text-gray-600 line-clamp-2 leading-relaxed">
-                  ${prod.shortDesc}
-                </p>
-              </div>
-            </div>
-
-            <div class="px-5 pb-5 pt-2 flex items-center justify-between gap-3 border-t border-gray-100">
-              <div>
-                ${prod.originalPrice > prod.promoPrice ? `
-                  <div class="text-xs font-bold text-gray-400 line-through">RM ${Number(prod.originalPrice).toFixed(2)}</div>
-                ` : ''}
-                <div class="brand-font text-xl font-black text-brand-coral">RM ${Number(prod.promoPrice).toFixed(2)}</div>
-              </div>
-
-              <button onclick="openProductDetailModal('${prod.id}')" class="kk-custom-btn">
-                <span>${cardBtnText}</span>
-                <i class="fa-solid fa-arrow-right text-xs"></i>
-              </button>
-            </div>
-          </div>
-        `;
-      }).join('');
+      container.innerHTML = filtered.map(prod => buildProductCardHtml(prod)).join('');
     }
     window.renderProducts = renderProducts;
 
@@ -3762,7 +3925,7 @@ service cloud.firestore {
 
     function switchAdminTab(tabId) {
       const tabs = [
-        'tab-overview', 'tab-theme-customizer', 'tab-copywriting', 'tab-products', 'tab-carousel-manager',
+        'tab-overview', 'tab-products', 'tab-theme-customizer', 'tab-copywriting', 'tab-carousel-manager',
         'tab-categories', 'tab-navigation', 'tab-sections', 'tab-appearance',
         'tab-payments', 'tab-firebase'
       ];
@@ -3796,35 +3959,91 @@ service cloud.firestore {
     window.updateAdminDashboardStats = updateAdminDashboardStats;
 
     // -------------------------------------------------------------------------
-    // ADMIN: PRODUCTS CRUD
+    // ADMIN: PRODUCTS CRUD + UP/DOWN REORDER ARROWS + BEST SELLING / WHAT'S NEW
     // -------------------------------------------------------------------------
     function renderAdminProductsTable() {
       const list = document.getElementById('admin-products-list');
-      list.innerHTML = storeData.products.map(p => {
+      if (!list) return;
+      const total = storeData.products.length;
+
+      list.innerHTML = storeData.products.map((p, idx) => {
         const catObj = storeData.categories.find(c => c.id === p.category);
         const catLabel = catObj ? catObj.name : (p.categoryName || '');
+        const isBest = p.isBestSelling === true;
+        const isNew = p.isWhatsNew === true;
+
         return `
-          <div class="bg-white p-3.5 rounded-2xl border border-gray-200 flex items-center justify-between gap-3">
-            <div class="flex items-center space-x-3 min-w-0">
+          <div class="bg-white p-3.5 rounded-2xl border border-gray-200 flex items-center justify-between gap-2.5">
+            <div class="flex items-center space-x-3 min-w-0 flex-1">
               <img src="${p.coverImage}" class="w-12 h-12 rounded-xl object-cover shrink-0 border border-gray-200" />
-              <div class="min-w-0">
+              <div class="min-w-0 flex-1">
                 <div class="brand-font text-sm font-black text-brand-dark truncate">${p.title}</div>
-                <div class="text-xs font-bold text-brand-coral">RM ${Number(p.promoPrice).toFixed(2)} <span class="text-gray-400 font-normal">(${catLabel})</span></div>
+                <div class="text-xs font-bold text-brand-coral truncate">RM ${Number(p.promoPrice).toFixed(2)} <span class="text-gray-400 font-normal">(${catLabel})</span></div>
+                <div class="flex flex-wrap items-center gap-1.5 mt-1.5">
+                  <button type="button" onclick="toggleProductShowcaseFlag('${p.id}', 'isBestSelling')" class="px-2.5 py-0.5 rounded-full text-[10px] font-black transition-colors inline-flex items-center gap-1 ${isBest ? 'bg-amber-400 text-[#16325C] shadow-2xs' : 'bg-gray-100 text-gray-500 hover:bg-amber-100'}">
+                    <i class="fa-solid fa-star"></i> Best Selling
+                  </button>
+                  <button type="button" onclick="toggleProductShowcaseFlag('${p.id}', 'isWhatsNew')" class="px-2.5 py-0.5 rounded-full text-[10px] font-black transition-colors inline-flex items-center gap-1 ${isNew ? 'bg-pink-500 text-white shadow-2xs' : 'bg-gray-100 text-gray-500 hover:bg-pink-100'}">
+                    <i class="fa-solid fa-sparkles"></i> What's New
+                  </button>
+                </div>
               </div>
             </div>
+
+            <!-- Right Controls: Edit, Padam + Reorder Arrows (↑ ↓) -->
             <div class="flex items-center space-x-1.5 shrink-0">
-              <button onclick="openProductEditForm('${p.id}')" class="px-3 py-1.5 bg-amber-100 text-amber-800 rounded-xl text-xs font-black hover:bg-amber-200">
+              <button type="button" onclick="openProductEditForm('${p.id}')" class="px-2.5 py-1.5 bg-amber-100 text-amber-800 rounded-xl text-xs font-black hover:bg-amber-200">
                 Edit
               </button>
-              <button onclick="deleteProductById('${p.id}')" class="px-3 py-1.5 bg-red-100 text-red-700 rounded-xl text-xs font-black hover:bg-red-200">
+              <button type="button" onclick="deleteProductById('${p.id}')" class="px-2.5 py-1.5 bg-red-100 text-red-700 rounded-xl text-xs font-black hover:bg-red-200">
                 Padam
               </button>
+              <div class="flex flex-col gap-1 pl-1 border-l border-gray-200">
+                <button type="button" onclick="moveProductItem(${idx}, -1)" ${idx === 0 ? 'disabled' : ''} class="w-7 h-6 rounded-lg bg-sky-100 hover:bg-sky-200 disabled:opacity-35 text-[#0E7AE6] text-xs font-black flex items-center justify-center" title="Naik Atas">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                <button type="button" onclick="moveProductItem(${idx}, 1)" ${idx === total - 1 ? 'disabled' : ''} class="w-7 h-6 rounded-lg bg-sky-100 hover:bg-sky-200 disabled:opacity-35 text-[#0E7AE6] text-xs font-black flex items-center justify-center" title="Turun Bawah">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </div>
             </div>
           </div>
         `;
       }).join('');
     }
     window.renderAdminProductsTable = renderAdminProductsTable;
+
+    async function moveProductItem(idx, direction) {
+      const newIdx = idx + direction;
+      if (newIdx < 0 || newIdx >= storeData.products.length) return;
+
+      const temp = storeData.products[idx];
+      storeData.products[idx] = storeData.products[newIdx];
+      storeData.products[newIdx] = temp;
+
+      storeData.products.forEach((item, i) => {
+        item.sortOrder = i;
+      });
+
+      renderAdminProductsTable();
+      renderFeaturedSections();
+      renderProducts();
+
+      if (window.firebaseCloud) {
+        await window.firebaseCloud.saveAllProducts(storeData.products);
+        showToast("Susunan produk dikemaskini & disimpan!", "success");
+      }
+    }
+
+    async function toggleProductShowcaseFlag(productId, flagKey) {
+      const prod = storeData.products.find(p => p.id === productId);
+      if (!prod) return;
+      prod[flagKey] = !prod[flagKey];
+
+      renderAdminProductsTable();
+      renderFeaturedSections();
+      await persistStoreData(prod, false);
+    }
 
     function openProductEditForm(productId) {
       const card = document.getElementById('product-edit-form-card');
@@ -3842,6 +4061,8 @@ service cloud.firestore {
         document.getElementById('edit-prod-promo-price').value = p.promoPrice;
         document.getElementById('edit-prod-age').value = p.ageGroup || "";
         document.getElementById('edit-prod-badge').value = p.badge || "";
+        document.getElementById('edit-prod-bestselling').checked = p.isBestSelling === true;
+        document.getElementById('edit-prod-whatsnew').checked = p.isWhatsNew === true;
         document.getElementById('edit-prod-cover').value = p.coverImage || "";
         document.getElementById('edit-prod-short-desc').value = p.shortDesc || "";
         document.getElementById('edit-prod-full-desc').value = p.fullDesc || "";
@@ -3856,6 +4077,8 @@ service cloud.firestore {
         document.getElementById('edit-prod-promo-price').value = "19.00";
         document.getElementById('edit-prod-age').value = "Ages 3-6";
         document.getElementById('edit-prod-badge').value = "NEW";
+        document.getElementById('edit-prod-bestselling').checked = false;
+        document.getElementById('edit-prod-whatsnew').checked = true;
         document.getElementById('edit-prod-cover').value = "";
         document.getElementById('edit-prod-short-desc').value = "";
         document.getElementById('edit-prod-full-desc').value = "";
@@ -3893,6 +4116,8 @@ service cloud.firestore {
         promoPrice: promoPrice,
         ageGroup: document.getElementById('edit-prod-age').value || "Ages 3-6",
         badge: document.getElementById('edit-prod-badge').value || "",
+        isBestSelling: document.getElementById('edit-prod-bestselling').checked,
+        isWhatsNew: document.getElementById('edit-prod-whatsnew').checked,
         shortDesc: document.getElementById('edit-prod-short-desc').value,
         fullDesc: document.getElementById('edit-prod-full-desc').value,
         coverImage: document.getElementById('edit-prod-cover').value || "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=85",
@@ -3911,6 +4136,7 @@ service cloud.firestore {
           storeData.products[index] = { ...storeData.products[index], ...productPayload };
           savedProd = storeData.products[index];
         }
+        await persistStoreData(savedProd, false);
       } else {
         const newId = "prod-" + Date.now();
         savedProd = {
@@ -3926,13 +4152,18 @@ service cloud.firestore {
           ]
         };
         storeData.products.unshift(savedProd);
+        storeData.products.forEach((item, i) => { item.sortOrder = i; });
+        if (window.firebaseCloud) {
+          await window.firebaseCloud.saveAllProducts(storeData.products);
+          showToast("Produk baru ditambah & disimpan!", "success");
+        }
       }
 
-      await persistStoreData(savedProd, false);
       closeProductEditForm();
       renderAdminProductsTable();
       populateGalleryProductSelector();
       renderCategories();
+      renderFeaturedSections();
       renderProducts();
       updateAdminDashboardStats();
     }
@@ -3950,6 +4181,7 @@ service cloud.firestore {
         renderAdminProductsTable();
         populateGalleryProductSelector();
         renderCategories();
+        renderFeaturedSections();
         renderProducts();
         updateAdminDashboardStats();
         showToast("Produk telah dipadam.", "info");
@@ -4090,6 +4322,7 @@ service cloud.firestore {
         }
       });
       renderCategories();
+      renderFeaturedSections();
       renderProducts();
     }
 
@@ -4121,6 +4354,7 @@ service cloud.firestore {
       });
       renderAdminCategoriesList();
       renderCategories();
+      renderFeaturedSections();
       renderProducts();
       renderAdminProductsTable();
       await persistStoreData(null, true);
@@ -4153,7 +4387,7 @@ service cloud.firestore {
     }
 
     // -------------------------------------------------------------------------
-    // ADMIN: NAVIGATION & SECTIONS (INCLUDING HERO BANNER IMAGE TOGGLE)
+    // ADMIN: NAVIGATION & SECTIONS
     // -------------------------------------------------------------------------
     function renderAdminNavigationList() {
       const list = document.getElementById('admin-navigation-list');
@@ -4260,6 +4494,7 @@ service cloud.firestore {
         sec.visible = !sec.visible;
         await persistStoreData(null, true);
         applyBrandSettings();
+        renderFeaturedSections();
         renderAdminSectionsList();
       }
     }
