@@ -139,6 +139,7 @@
       justify-content: center;
       gap: 8px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .kk-custom-btn:hover {
@@ -359,7 +360,7 @@
 
       <!-- Header Right Actions -->
       <div class="flex items-center space-x-2.5">
-        <a id="header-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-3d bg-[#FFCA28] hover:bg-[#ffd54f] text-[#16325C] px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-black flex items-center space-x-2 shadow-md">
+        <a id="header-whatsapp-btn" href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" class="btn-3d bg-[#FFCA28] hover:bg-[#ffd54f] text-[#16325C] px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-black flex items-center space-x-2 shadow-md">
           <i class="fa-brands fa-whatsapp text-base sm:text-lg text-[#16325C]"></i>
           <span id="header-chat-btn-text">Chat Now</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -396,7 +397,7 @@
       </div>
 
       <div class="space-y-3 pt-4 border-t border-gray-100">
-        <a id="mobile-drawer-whatsapp" href="#" target="_blank" class="w-full py-3 bg-[#25D366] text-white rounded-full font-extrabold text-sm flex items-center justify-center space-x-2 shadow-md">
+        <a id="mobile-drawer-whatsapp" href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-[#25D366] text-white rounded-full font-extrabold text-sm flex items-center justify-center space-x-2 shadow-md">
           <i class="fa-brands fa-whatsapp text-lg"></i>
           <span>Chat di WhatsApp</span>
         </a>
@@ -413,113 +414,83 @@
   <!-- ========================================================================= -->
   <main class="flex-1">
 
-    <!-- 1. HERO SECTION (ROYAL BLUE SKY + FLUFFY CLOUD CARD + OPTIONAL HERO BANNER) -->
-    <section id="home" class="relative bg-gradient-to-b from-[#0E7AE6] via-[#1C8EF9] to-[#48AAFF] pt-6 pb-24 sm:pt-10 sm:pb-32 overflow-hidden">
+    <!-- 1. HERO SECTION (ROYAL BLUE SKY + CENTERED FLUFFY CLOUD CARD) -->
+    <section id="home" class="relative bg-gradient-to-b from-[#0E7AE6] via-[#1C8EF9] to-[#48AAFF] pt-7 pb-24 sm:pt-12 sm:pb-32 overflow-hidden">
 
       <!-- Twinkling Stars & Clouds Decoration (Cute SVGs) -->
-      <div class="hidden sm:block absolute top-6 left-[44%] w-7 h-7 animate-float-slow pointer-events-none">
+      <div class="hidden sm:block absolute top-6 left-[12%] w-7 h-7 animate-float-slow pointer-events-none">
         <svg viewBox="0 0 32 32" class="w-full h-full"><path d="M16 2l3.8 7.8 8.6 1.2-6.2 6 1.5 8.5L16 21.5l-7.7 4 1.5-8.5-6.2-6 8.6-1.2z" fill="#FFCA28" stroke="#FFF8E1" stroke-width="1.5" stroke-linejoin="round"/></svg>
       </div>
-      <div class="hidden sm:block absolute top-14 left-[18%] text-white/40 text-3xl pointer-events-none"><i class="fa-solid fa-cloud"></i></div>
-      <div class="hidden sm:block absolute top-8 right-[24%] w-6 h-6 animate-float-reverse pointer-events-none">
+      <div class="hidden sm:block absolute top-14 left-[20%] text-white/40 text-3xl pointer-events-none"><i class="fa-solid fa-cloud"></i></div>
+      <div class="hidden sm:block absolute top-8 right-[14%] w-6 h-6 animate-float-reverse pointer-events-none">
         <svg viewBox="0 0 32 32" class="w-full h-full"><path d="M16 2C16 10 22 16 30 16C22 16 16 22 16 30C16 22 10 16 2 16C10 16 16 10 16 2Z" fill="#FFF59D"/></svg>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div id="hero-main-grid" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+        <!-- Centered Fluffy Cloud Copy Container -->
+        <div id="hero-copy-col" class="relative">
+          <!-- Cute Smiling Rainbow & Fluffy Cloud SVG Peeking Top-Right -->
+          <div class="hidden sm:block w-28 h-24 -top-10 -right-5 absolute z-20 animate-float-reverse pointer-events-none drop-shadow-xl">
+            <svg viewBox="0 0 130 110" class="w-full h-full">
+              <path d="M24 72a41 41 0 0 1 82 0" fill="none" stroke="#FF4D6D" stroke-width="9" stroke-linecap="round"/>
+              <path d="M33 72a32 32 0 0 1 64 0" fill="none" stroke="#FFCA28" stroke-width="9" stroke-linecap="round"/>
+              <path d="M42 72a23 23 0 0 1 46 0" fill="none" stroke="#4ADE80" stroke-width="9" stroke-linecap="round"/>
+              <path d="M51 72a14 14 0 0 1 28 0" fill="none" stroke="#38BDF8" stroke-width="9" stroke-linecap="round"/>
+              <path d="M26 86h78a14 14 0 0 0 0-28 18 18 0 0 0-34-6 16 16 0 0 0-30 8 13 13 0 0 0-14 26z" fill="#FFFFFF" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="56" cy="72" r="2.5" fill="#16325C"/>
+              <circle cx="74" cy="72" r="2.5" fill="#16325C"/>
+              <path d="M61 77c2 2.5 6 2.5 8 0" stroke="#16325C" stroke-width="2.3" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
 
-          <!-- Left Fluffy Cloud Copy Container -->
-          <div id="hero-copy-col" class="lg:col-span-6 relative">
-            <div class="bg-white rounded-[40px] sm:rounded-[48px] p-6 sm:p-9 shadow-2xl border-4 border-white/80 relative">
-              <!-- Decorative Little Cloud Bump Top-Right -->
-              <div class="hidden sm:block -top-6 right-12 w-20 h-12 bg-white rounded-full absolute pointer-events-none"></div>
-              <div class="hidden sm:block -top-4 right-24 w-14 h-10 bg-white rounded-full absolute pointer-events-none"></div>
+          <div class="bg-white rounded-[40px] sm:rounded-[48px] p-6 sm:p-10 shadow-2xl border-4 border-white/80 relative text-center">
+            <!-- Decorative Little Cloud Bumps -->
+            <div class="hidden sm:block -top-6 left-16 w-20 h-12 bg-white rounded-full absolute pointer-events-none"></div>
+            <div class="hidden sm:block -top-4 left-28 w-14 h-10 bg-white rounded-full absolute pointer-events-none"></div>
 
-              <div class="inline-flex items-center space-x-2 bg-sky-50 border border-sky-200 text-[#0E7AE6] px-3.5 py-1.5 rounded-full text-xs font-extrabold mb-3">
-                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z" fill="#FFCA28" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                <span id="hero-pill-badge">100% Kid-Safe • Printable &amp; Interactive Apps</span>
-              </div>
-
-              <h1 id="hero-main-headline" class="brand-font text-3xl sm:text-5xl font-black text-[#16325C] leading-[1.12]">
-                Where Little Minds <span class="text-[#F59E0B]">Grow</span> Big <span class="text-[#FF4D6D]">Dreams!</span>
-              </h1>
-
-              <p id="hero-subheadline" class="text-sm sm:text-base font-semibold kk-body-text mt-3.5 leading-relaxed">
-                A safe, fun &amp; nurturing digital learning world where children play, explore phonics, Montessori busy books, and math games every single day!
-              </p>
-
-              <!-- Pill CTA Buttons -->
-              <div class="flex flex-wrap items-center gap-3 mt-6">
-                <a href="#products-showcase" class="kk-custom-btn">
-                  <span id="hero-primary-cta-text">Discover More</span>
-                  <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-                <a href="#categories-section" class="btn-3d bg-white border-2 border-sky-200 text-[#16325C] px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold flex items-center space-x-2 hover:bg-sky-50">
-                  <span class="w-6 h-6 rounded-full bg-[#0E7AE6] text-white flex items-center justify-center text-[10px]">
-                    <i class="fa-solid fa-play"></i>
-                  </span>
-                  <span id="hero-secondary-cta-text">Explore Topics</span>
-                </a>
-              </div>
+            <div class="inline-flex items-center space-x-2 bg-sky-50 border border-sky-200 text-[#0E7AE6] px-3.5 py-1.5 rounded-full text-xs font-extrabold mb-3.5">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z" fill="#FFCA28" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <span id="hero-pill-badge">100% Kid-Safe • Printable &amp; Interactive Apps</span>
             </div>
 
-            <!-- Cute 3D Smiling Space Rocket SVG Peeking Bottom-Left (Non-Animal) -->
-            <div class="hidden sm:block w-24 h-24 -bottom-12 -left-4 absolute z-20 animate-float-slow pointer-events-none drop-shadow-xl">
-              <svg viewBox="0 0 120 120" class="w-full h-full">
-                <path d="M46 92c0 12 14 20 14 20s14-8 14-20c0-6-6-10-14-10s-14 4-14 10z" fill="#FF6F00" stroke="#16325C" stroke-width="3"/>
-                <path d="M52 91c0 7 8 12 8 12s8-5 8-12c0-4-4-6-8-6s-8 2-8 6z" fill="#FFCA28"/>
-                <path d="M36 66L18 84l20 4z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M84 66l18 18-20 4z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M60 12c-18 16-24 40-24 68h48c0-28-6-52-24-68z" fill="#FFFFFF" stroke="#16325C" stroke-width="3.5" stroke-linejoin="round"/>
-                <path d="M60 12c-8 7-13 16-16 26h32c-3-10-8-19-16-26z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
-                <circle cx="60" cy="56" r="14" fill="#38BDF8" stroke="#16325C" stroke-width="3"/>
-                <circle cx="55" cy="54" r="2.2" fill="#16325C"/>
-                <circle cx="65" cy="54" r="2.2" fill="#16325C"/>
-                <path d="M56 60c2 2.5 6 2.5 8 0" stroke="#16325C" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-              </svg>
+            <h1 id="hero-main-headline" class="brand-font text-3xl sm:text-5xl font-black text-[#16325C] leading-[1.12]">
+              Where Little Minds <span class="text-[#F59E0B]">Grow</span> Big <span class="text-[#FF4D6D]">Dreams!</span>
+            </h1>
+
+            <p id="hero-subheadline" class="text-sm sm:text-base font-semibold kk-body-text mt-4 leading-relaxed max-w-2xl mx-auto">
+              A safe, fun &amp; nurturing digital learning world where children play, explore phonics, Montessori busy books, and math games every single day!
+            </p>
+
+            <!-- Pill CTA Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mt-6">
+              <a href="#products-showcase" class="kk-custom-btn">
+                <span id="hero-primary-cta-text">Discover More</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#categories-section" class="btn-3d bg-white border-2 border-sky-200 text-[#16325C] px-5 py-3 rounded-full text-xs sm:text-sm font-extrabold flex items-center space-x-2 hover:bg-sky-50">
+                <span class="w-6 h-6 rounded-full bg-[#0E7AE6] text-white flex items-center justify-center text-[10px]">
+                  <i class="fa-solid fa-play"></i>
+                </span>
+                <span id="hero-secondary-cta-text">Explore Topics</span>
+              </a>
             </div>
           </div>
 
-          <!-- Right Storybook Cloud-Framed Illustration (Enable / Disable Controlled) -->
-          <div id="hero-banner-col" class="lg:col-span-6 relative">
-            <!-- Cute Smiling Rainbow & Fluffy Cloud SVG Peeking Top-Right (Non-Animal) -->
-            <div class="hidden sm:block w-28 h-24 -top-8 -right-3 absolute z-20 animate-float-reverse pointer-events-none drop-shadow-xl">
-              <svg viewBox="0 0 130 110" class="w-full h-full">
-                <path d="M24 72a41 41 0 0 1 82 0" fill="none" stroke="#FF4D6D" stroke-width="9" stroke-linecap="round"/>
-                <path d="M33 72a32 32 0 0 1 64 0" fill="none" stroke="#FFCA28" stroke-width="9" stroke-linecap="round"/>
-                <path d="M42 72a23 23 0 0 1 46 0" fill="none" stroke="#4ADE80" stroke-width="9" stroke-linecap="round"/>
-                <path d="M51 72a14 14 0 0 1 28 0" fill="none" stroke="#38BDF8" stroke-width="9" stroke-linecap="round"/>
-                <path d="M26 86h78a14 14 0 0 0 0-28 18 18 0 0 0-34-6 16 16 0 0 0-30 8 13 13 0 0 0-14 26z" fill="#FFFFFF" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
-                <circle cx="56" cy="72" r="2.5" fill="#16325C"/>
-                <circle cx="74" cy="72" r="2.5" fill="#16325C"/>
-                <path d="M61 77c2 2.5 6 2.5 8 0" stroke="#16325C" stroke-width="2.3" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-
-            <div class="bg-white/30 backdrop-blur-xs p-2.5 sm:p-3.5 rounded-[44px] shadow-2xl border-4 border-white/60">
-              <div class="relative rounded-[36px] overflow-hidden bg-sky-100 h-64 sm:h-80">
-                <img id="hero-banner-img" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85" alt="Kinder Klub Learning" class="w-full h-full object-cover" />
-                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-full shadow-lg flex items-center justify-between gap-2">
-                  <div class="flex items-center space-x-2 min-w-0">
-                    <svg viewBox="0 0 36 36" class="w-6 h-6 shrink-0">
-                      <rect x="4" y="9" width="28" height="17" rx="5" fill="#FFCA28" stroke="#16325C" stroke-width="2"/>
-                      <rect x="8" y="12" width="6" height="6" rx="1.5" fill="#E0F2FE" stroke="#16325C" stroke-width="1.5"/>
-                      <rect x="16" y="12" width="6" height="6" rx="1.5" fill="#E0F2FE" stroke="#16325C" stroke-width="1.5"/>
-                      <rect x="24" y="12" width="5" height="6" rx="1.5" fill="#E0F2FE" stroke="#16325C" stroke-width="1.5"/>
-                      <circle cx="11" cy="26" r="3.5" fill="#16325C"/>
-                      <circle cx="25" cy="26" r="3.5" fill="#16325C"/>
-                    </svg>
-                    <span id="hero-banner-caption" class="brand-font text-xs sm:text-sm font-black text-[#16325C] truncate">Trusted by 3,200+ Happy Families</span>
-                  </div>
-                  <span class="bg-[#FFCA28] text-[#16325C] px-2.5 py-0.5 rounded-full text-[11px] font-black inline-flex items-center gap-1 shrink-0">
-                    <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.9 6.1 20l1.2-6.5L2.5 8.9 9.1 8z" fill="#FF6F00"/></svg>
-                    <span id="hero-banner-rating">4.9/5</span>
-                  </span>
-                </div>
-              </div>
-            </div>
+          <!-- Cute 3D Smiling Space Rocket SVG Peeking Bottom-Left -->
+          <div class="hidden sm:block w-24 h-24 -bottom-11 -left-5 absolute z-20 animate-float-slow pointer-events-none drop-shadow-xl">
+            <svg viewBox="0 0 120 120" class="w-full h-full">
+              <path d="M46 92c0 12 14 20 14 20s14-8 14-20c0-6-6-10-14-10s-14 4-14 10z" fill="#FF6F00" stroke="#16325C" stroke-width="3"/>
+              <path d="M52 91c0 7 8 12 8 12s8-5 8-12c0-4-4-6-8-6s-8 2-8 6z" fill="#FFCA28"/>
+              <path d="M36 66L18 84l20 4z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M84 66l18 18-20 4z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M60 12c-18 16-24 40-24 68h48c0-28-6-52-24-68z" fill="#FFFFFF" stroke="#16325C" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M60 12c-8 7-13 16-16 26h32c-3-10-8-19-16-26z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="60" cy="56" r="14" fill="#38BDF8" stroke="#16325C" stroke-width="3"/>
+              <circle cx="55" cy="54" r="2.2" fill="#16325C"/>
+              <circle cx="65" cy="54" r="2.2" fill="#16325C"/>
+              <path d="M56 60c2 2.5 6 2.5 8 0" stroke="#16325C" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            </svg>
           </div>
-
         </div>
       </div>
 
@@ -797,6 +768,115 @@
       </div>
     </section>
 
+    <!-- 6B. MAKE INCOME (AFFILIATE PROGRAM — IPAD MOCKUP WITH MONEY & BANK SVGs) -->
+    <section id="make-income-section" class="py-12 bg-gradient-to-b from-white via-[#FFFBEB] to-white relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+
+          <!-- iPad / Tablet Mockup Frame with Cute Bank, Cash & Gold Coins SVGs -->
+          <div class="flex justify-center shrink-0">
+            <div class="w-64 sm:w-72 bg-[#16325C] p-3 rounded-[38px] shadow-2xl border-4 border-amber-200 transform rotate-2">
+              <div class="bg-gradient-to-b from-[#0E7AE6] via-[#1B8EF2] to-[#38BDF8] rounded-[28px] p-5 text-center text-white space-y-3.5 relative overflow-hidden">
+                <!-- Tablet Camera / Top Bar -->
+                <div class="w-12 h-1.5 bg-white/30 rounded-full mx-auto"></div>
+                <div id="make-income-tablet-sub" class="text-[11px] font-black text-[#FFCA28] uppercase tracking-widest">EARN &amp; SAVE</div>
+                <div id="make-income-tablet-title" class="brand-font text-2xl font-black leading-tight">Affiliate Klub</div>
+
+                <!-- Cute Bank Building + Money Notes + Gold Coins Vector Illustration -->
+                <div class="w-44 h-36 mx-auto bg-white/15 backdrop-blur-xs rounded-3xl flex items-center justify-center p-2 shadow-inner border border-white/25">
+                  <svg viewBox="0 0 180 140" class="w-full h-full drop-shadow-md">
+                    <!-- Sparkles -->
+                    <path d="M24 22l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FFCA28"/>
+                    <path d="M156 18l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#FFF59D"/>
+
+                    <!-- Flying Green Banknotes (Left & Right) -->
+                    <g transform="rotate(-16 32 46)">
+                      <rect x="10" y="34" width="44" height="24" rx="5" fill="#4ADE80" stroke="#16325C" stroke-width="2.5"/>
+                      <circle cx="32" cy="46" r="6" fill="#BBF7D0" stroke="#16325C" stroke-width="1.8"/>
+                      <text x="32" y="49" text-anchor="middle" fill="#16325C" font-weight="900" font-size="8">RM</text>
+                    </g>
+                    <g transform="rotate(14 148 48)">
+                      <rect x="126" y="36" width="44" height="24" rx="5" fill="#4ADE80" stroke="#16325C" stroke-width="2.5"/>
+                      <circle cx="148" cy="48" r="6" fill="#BBF7D0" stroke="#16325C" stroke-width="1.8"/>
+                      <text x="148" y="51" text-anchor="middle" fill="#16325C" font-weight="900" font-size="8">RM</text>
+                    </g>
+
+                    <!-- Cute Bank Building Center -->
+                    <polygon points="90,18 44,44 136,44" fill="#FFCA28" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
+                    <circle cx="90" cy="34" r="6" fill="#FFFFFF" stroke="#16325C" stroke-width="2"/>
+                    <text x="90" y="37" text-anchor="middle" fill="#16325C" font-weight="900" font-size="8">$</text>
+
+                    <rect x="50" y="44" width="80" height="58" rx="4" fill="#FFFFFF" stroke="#16325C" stroke-width="3"/>
+                    <!-- Bank Pillars -->
+                    <rect x="58" y="50" width="9" height="44" rx="2" fill="#E0F2FE" stroke="#16325C" stroke-width="2"/>
+                    <rect x="76" y="50" width="9" height="44" rx="2" fill="#E0F2FE" stroke="#16325C" stroke-width="2"/>
+                    <rect x="95" y="50" width="9" height="44" rx="2" fill="#E0F2FE" stroke="#16325C" stroke-width="2"/>
+                    <rect x="113" y="50" width="9" height="44" rx="2" fill="#E0F2FE" stroke="#16325C" stroke-width="2"/>
+                    <!-- Bank Steps -->
+                    <rect x="44" y="102" width="92" height="8" rx="3" fill="#BAE6FD" stroke="#16325C" stroke-width="2.5"/>
+                    <rect x="38" y="110" width="104" height="9" rx="3" fill="#7DD3FC" stroke="#16325C" stroke-width="2.5"/>
+
+                    <!-- Stack of Gold Coins Bottom Left -->
+                    <ellipse cx="34" cy="116" rx="16" ry="6" fill="#F59E0B" stroke="#16325C" stroke-width="2.2"/>
+                    <ellipse cx="34" cy="109" rx="16" ry="6" fill="#FFCA28" stroke="#16325C" stroke-width="2.2"/>
+                    <ellipse cx="34" cy="102" rx="16" ry="6" fill="#FDE047" stroke="#16325C" stroke-width="2.2"/>
+
+                    <!-- Big Cute Smiling Gold Coin Bottom Right -->
+                    <circle cx="144" cy="103" r="18" fill="#FFCA28" stroke="#16325C" stroke-width="2.8"/>
+                    <circle cx="144" cy="103" r="13" fill="#FDE047" stroke="#F59E0B" stroke-width="1.5"/>
+                    <circle cx="140" cy="101" r="1.8" fill="#16325C"/>
+                    <circle cx="148" cy="101" r="1.8" fill="#16325C"/>
+                    <path d="M141 106c1.8 2 4.2 2 6 0" stroke="#16325C" stroke-width="2" stroke-linecap="round" fill="none"/>
+                  </svg>
+                </div>
+
+                <!-- White Pill Inside Tablet -->
+                <div id="make-income-tablet-badge" class="bg-white text-[#16325C] rounded-2xl p-2.5 text-[11px] font-extrabold shadow-md">
+                  Earn money even while you’re sleeping!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text & CTA Side -->
+          <div class="max-w-lg text-center lg:text-left space-y-4">
+            <span id="make-income-badge" class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-900 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider border border-amber-300">
+              <svg viewBox="0 0 24 24" class="w-3.5 h-3.5"><circle cx="12" cy="12" r="9" fill="#FFCA28" stroke="#16325C" stroke-width="2"/><text x="12" y="15" text-anchor="middle" fill="#16325C" font-weight="900" font-size="9">$</text></svg>
+              <span>AFFILIATE PROGRAM</span>
+            </span>
+
+            <h2 id="make-income-heading" class="brand-font text-3xl sm:text-4xl font-black text-[#16325C] leading-tight">
+              Make Income With <span class="text-[#F59E0B]">Kinder Klub</span>
+            </h2>
+
+            <p id="make-income-desc" class="text-sm sm:text-base font-bold text-gray-600 leading-relaxed">
+              Buy any products and join as affiliate and start growing your savings!
+            </p>
+
+            <!-- 2 Dark Navy Feature Pills -->
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2.5 pt-1">
+              <span class="bg-[#16325C] text-white px-4 py-2 rounded-xl text-xs font-black flex items-center gap-2 shadow-xs">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0"><polygon points="12,3 3,8 21,8" fill="#FFCA28"/><rect x="5" y="9" width="14" height="9" fill="#38BDF8"/><rect x="3" y="19" width="18" height="2.5" fill="#FFFFFF"/></svg>
+                <span id="make-income-pill-1">High Commission More Than 70%</span>
+              </span>
+              <span class="bg-[#16325C] text-white px-4 py-2 rounded-xl text-xs font-black flex items-center gap-2 shadow-xs">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0"><rect x="2" y="6" width="20" height="12" rx="3" fill="#4ADE80"/><circle cx="12" cy="12" r="3" fill="#FFFFFF"/></svg>
+                <span id="make-income-pill-2">Grow Your Savings</span>
+              </span>
+            </div>
+
+            <div class="pt-2">
+              <a id="make-income-cta-btn" href="https://wa.me/60123456789?text=Hi%20Kinder%20Klub!%20Saya%20berminat%20untuk%20daftar%20Affiliate." target="_blank" rel="noopener noreferrer" onclick="showToast('Membuka pautan Affiliate...', 'info')" class="kk-custom-btn">
+                <span id="make-income-cta-text">Join Affiliate Now</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- 7. STAY CONNECTED + QUICK WHATSAPP INQUIRY CARD -->
     <section class="pt-10 pb-16 bg-gradient-to-b from-white to-[#DFF0FF] relative overflow-hidden">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
@@ -858,12 +938,12 @@
                 </svg>
               </div>
               <h4 id="inquiry-card-title" class="brand-font text-2xl font-black text-[#16325C] leading-tight">Ask Teacher For Free Guide</h4>
-              <input type="text" id="quick-parent-name" placeholder="Parent's Name" class="w-full px-4 py-2.5 bg-white rounded-full text-xs font-bold text-[#16325C] outline-none shadow-2xs" />
-              <input type="text" id="quick-child-age" placeholder="Child's Age (e.g. 4 Years Old)" class="w-full px-4 py-2.5 bg-white rounded-full text-xs font-bold text-[#16325C] outline-none shadow-2xs" />
-              <button type="button" onclick="sendQuickWhatsAppInquiry()" class="w-full py-3 bg-[#0E7AE6] hover:bg-[#0B66C3] text-white rounded-full text-xs sm:text-sm font-black shadow-md flex items-center justify-center space-x-2 transition-colors">
+              <input type="text" id="quick-parent-name" oninput="updateQuickInquiryWhatsappHref()" placeholder="Parent's Name" class="w-full px-4 py-2.5 bg-white rounded-full text-xs font-bold text-[#16325C] outline-none shadow-2xs" />
+              <input type="text" id="quick-child-age" oninput="updateQuickInquiryWhatsappHref()" placeholder="Child's Age (e.g. 4 Years Old)" class="w-full px-4 py-2.5 bg-white rounded-full text-xs font-bold text-[#16325C] outline-none shadow-2xs" />
+              <a id="inquiry-whatsapp-btn" href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" onclick="updateQuickInquiryWhatsappHref(); showToast('Membuka WhatsApp...', 'info')" class="w-full py-3 bg-[#0E7AE6] hover:bg-[#0B66C3] text-white rounded-full text-xs sm:text-sm font-black shadow-md flex items-center justify-center space-x-2 transition-colors no-underline">
                 <span id="inquiry-btn-text">Chat on WhatsApp</span>
                 <i class="fa-solid fa-arrow-right"></i>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -917,7 +997,7 @@
             <li><a href="#home" class="hover:text-[#FFCA28]">Home</a></li>
             <li><a href="#categories-section" class="hover:text-[#FFCA28]">Learning Programs</a></li>
             <li><a href="#products-showcase" class="hover:text-[#FFCA28]">All Digital Packs</a></li>
-            <li><a href="#testimonials-section" class="hover:text-[#FFCA28]">Parent Reviews</a></li>
+            <li><a href="#make-income-section" class="hover:text-[#FFCA28]">Make Income (Affiliate)</a></li>
           </ul>
         </div>
 
@@ -951,7 +1031,7 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON (SINGLE GREEN BUTTON) -->
-  <a id="floating-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-30 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl flex items-center justify-center text-2xl transition-transform hover:scale-110 border-3 border-white">
+  <a id="floating-whatsapp-btn" href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-30 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-2xl flex items-center justify-center text-2xl transition-transform hover:scale-110 border-3 border-white">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -1162,7 +1242,7 @@
             </div>
             <div>
               <h2 class="brand-font text-lg sm:text-2xl font-black leading-tight">Kinder Klub Store Manager</h2>
-              <p class="text-[11px] sm:text-xs text-white/80 font-semibold">Urus susunan produk, Best Selling, What's New, kategori &amp; Firebase Cloud</p>
+              <p class="text-[11px] sm:text-xs text-white/80 font-semibold">Urus susunan produk, Best Selling, What's New, Affiliate &amp; Firebase Cloud</p>
             </div>
           </div>
 
@@ -1475,7 +1555,7 @@
             <div id="tab-copywriting" class="hidden space-y-6">
               <div>
                 <h3 class="brand-font text-xl font-black text-brand-dark">Edit Semua Ayat &amp; Teks Website</h3>
-                <p class="text-xs text-gray-500">Ubah mana-mana tajuk, lencana <strong>SPECIAL OFFER</strong>, tajuk <strong>Best Selling &amp; What's New</strong>, butang, ulasan ibu bapa, atau soalan FAQ di bawah dan tekan Simpan.</p>
+                <p class="text-xs text-gray-500">Ubah mana-mana tajuk, lencana <strong>SPECIAL OFFER</strong>, tajuk <strong>Best Selling &amp; What's New</strong>, bahagian <strong>Make Income (Affiliate)</strong>, butang, ulasan ibu bapa, atau soalan FAQ di bawah dan tekan Simpan.</p>
               </div>
 
               <!-- 1. Bar Pengumuman Atas -->
@@ -1527,14 +1607,6 @@
                   <div>
                     <label class="block font-bold mb-1">Teks Butang Kedua (Putih)</label>
                     <input type="text" id="copy-hero-cta2" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
-                  </div>
-                  <div>
-                    <label class="block font-bold mb-1">Ayat Pada Gambar Hero</label>
-                    <input type="text" id="copy-hero-banner-caption" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
-                  </div>
-                  <div>
-                    <label class="block font-bold mb-1">Teks Rating (cth: 4.9/5)</label>
-                    <input type="text" id="copy-hero-banner-rating" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
                   </div>
                 </div>
               </div>
@@ -1661,6 +1733,48 @@
                   <div>
                     <label class="block font-bold mb-1">Teks Kotak Carian Produk</label>
                     <input type="text" id="copy-prod-search" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4B. Bahagian Make Income (Affiliate Program) -->
+              <div class="bg-amber-50/70 p-4 rounded-2xl border-2 border-amber-300 space-y-3 text-xs">
+                <div class="font-black uppercase text-amber-900">4B. Bahagian Make Income (Affiliate Program &amp; Tablet Mockup)</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block font-bold mb-1">Lencana Atas (cth: AFFILIATE PROGRAM)</label>
+                    <input type="text" id="copy-income-badge" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Tajuk Besar Make Income</label>
+                    <input type="text" id="copy-income-heading" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block font-bold mb-1">Ayat Penerangan Utama Affiliate</label>
+                    <input type="text" id="copy-income-desc" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Tajuk Dalam Tablet (cth: Affiliate Klub)</label>
+                    <input type="text" id="copy-income-tablet-title" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Lencana Putih Bawah Tablet</label>
+                    <input type="text" id="copy-income-tablet-badge" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Pil 1 &amp; Pil 2 (Komisen &amp; Savings)</label>
+                    <div class="flex gap-2">
+                      <input type="text" id="copy-income-pill1" class="w-1/2 p-2 bg-white rounded-xl border border-gray-300 font-bold" />
+                      <input type="text" id="copy-income-pill2" class="w-1/2 p-2 bg-white rounded-xl border border-gray-300 font-bold" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Teks Butang Daftar Affiliate</label>
+                    <input type="text" id="copy-income-cta-text" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label class="block font-bold mb-1">Link Pendaftaran Affiliate (Kosongkan jika mahu terus ke WhatsApp anda)</label>
+                    <input type="url" id="copy-income-cta-url" placeholder="https://... (biarkan kosong untuk buka WhatsApp automatik)" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
                   </div>
                 </div>
               </div>
@@ -1912,7 +2026,7 @@
             <div id="tab-sections" class="hidden space-y-5">
               <div>
                 <h3 class="brand-font text-xl font-black text-brand-dark">Seksyen Halaman Utama</h3>
-                <p class="text-xs text-gray-500">Kawal bahagian mana yang dipaparkan atau disembunyikan pada laman utama kedai anda (termasuk Kotak Gambar Banner Hero, Best Selling &amp; What's New).</p>
+                <p class="text-xs text-gray-500">Kawal bahagian mana yang dipaparkan atau disembunyikan pada laman utama kedai anda (termasuk Best Selling, What's New &amp; Make Income).</p>
               </div>
               <div id="admin-sections-list" class="space-y-2">
                 <!-- Rendered dynamically -->
@@ -1937,30 +2051,6 @@
                   </button>
                 </div>
                 <input type="text" id="setting-logo-url" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 text-xs font-bold" placeholder="URL logo tersuai (kosongkan untuk kekal guna ikon asal Kinder Klub)" />
-              </div>
-
-              <!-- Hero Banner Image Enable / Disable + Upload -->
-              <div class="bg-sky-50/70 p-4 rounded-2xl border-2 border-sky-200 space-y-3 text-xs">
-                <div class="font-black uppercase text-[#0E7AE6]">Kotak Gambar Banner Hero (Gambar Apple / Ilustrasi Utama)</div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label class="block font-bold mb-1">Status Kotak Gambar Banner Hero</label>
-                    <select id="setting-show-hero-banner" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold">
-                      <option value="true">Enable — Papar Gambar Banner Hero</option>
-                      <option value="false">Disable — Sembunyikan Gambar Banner Hero</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label class="block font-bold mb-1">Gambar Banner Hero (Upload atau URL)</label>
-                    <div class="flex gap-2">
-                      <input type="text" id="setting-hero-banner" class="flex-1 p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
-                      <label class="px-3.5 py-2.5 bg-brand-sky text-white rounded-xl font-black cursor-pointer shrink-0 flex items-center gap-1">
-                        <i class="fa-solid fa-upload"></i> Upload
-                        <input type="file" accept="image/*" onchange="handleImageUploadToInput(event, 'setting-hero-banner', false)" class="hidden" />
-                      </label>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
@@ -2047,9 +2137,9 @@
                 <button onclick="savePaymentAndWhatsappSettings()" class="btn-3d px-6 py-3 bg-brand-purple text-white rounded-2xl text-xs font-black">
                   Simpan Tetapan WhatsApp &amp; DuitNow
                 </button>
-                <button type="button" onclick="testWhatsappConnection()" class="px-4 py-3 bg-emerald-100 text-emerald-800 rounded-2xl text-xs font-black hover:bg-emerald-200">
+                <a id="test-whatsapp-btn" href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer" onclick="updateTestWhatsappLink()" class="px-4 py-3 bg-emerald-100 text-emerald-800 rounded-2xl text-xs font-black hover:bg-emerald-200 inline-flex items-center">
                   <i class="fa-brands fa-whatsapp mr-1"></i> Uji Pautan WhatsApp
-                </button>
+                </a>
               </div>
             </div>
 
@@ -2197,6 +2287,9 @@ service cloud.firestore {
         auth = getAuth(app);
         db = getFirestore(app);
 
+        // Subscribe immediately so public products load without waiting for auth
+        subscribeToFirestore();
+
         try {
           if (!customConfigObj && !MY_FIREBASE_CONFIG && typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
             await signInWithCustomToken(auth, __initial_auth_token);
@@ -2209,12 +2302,12 @@ service cloud.firestore {
           console.warn("Firebase Auth notice:", authErr.code);
           if (authErr.code === 'auth/configuration-not-found') {
             updateStatus(false, "Sila buka Firebase Console > Build > Authentication > klik 'Get started' & aktifkan 'Anonymous'.");
+          } else if (authErr.code === 'auth/unauthorized-domain') {
+            updateStatus(false, `Domain (${window.location.hostname}) belum dibenarkan di Firebase Auth > Settings > Authorized domains.`);
           } else {
             updateStatus(false, "Ralat Auth: " + authErr.message);
           }
         }
-
-        subscribeToFirestore();
       } catch (err) {
         console.error("Firebase init error:", err);
         updateStatus(false, "Ralat Firebase: " + err.message);
@@ -2239,13 +2332,23 @@ service cloud.firestore {
         const currentStore = window.getStoreData();
         if (remoteConfig.settings) currentStore.settings = { ...currentStore.settings, ...remoteConfig.settings };
         if (remoteConfig.theme) currentStore.theme = { ...currentStore.theme, ...remoteConfig.theme };
-        if (remoteConfig.copy) currentStore.copy = { ...currentStore.copy, ...remoteConfig.copy };
+        if (remoteConfig.copy) {
+          const mergedCopy = { ...currentStore.copy, ...remoteConfig.copy };
+          if (mergedCopy.makeIncomeTabletBadge === "Earn Commission • Direct to Your Bank") {
+            mergedCopy.makeIncomeTabletBadge = "Earn money even while you’re sleeping!";
+          }
+          if (mergedCopy.makeIncomePill1 === "Direct Bank Payout") {
+            mergedCopy.makeIncomePill1 = "High Commission More Than 70%";
+          }
+          currentStore.copy = mergedCopy;
+        }
         if (Array.isArray(remoteConfig.categories)) currentStore.categories = remoteConfig.categories;
         if (Array.isArray(remoteConfig.navigation)) currentStore.navigation = remoteConfig.navigation;
         if (Array.isArray(remoteConfig.sections)) currentStore.sections = remoteConfig.sections;
         if (Array.isArray(remoteConfig.testimonials)) currentStore.testimonials = remoteConfig.testimonials;
         if (Array.isArray(remoteConfig.faqs)) currentStore.faqs = remoteConfig.faqs;
 
+        window.saveToLocalCache();
         window.applyDynamicThemeStyles();
         window.renderAllStorefront();
         window.setupWhatsAppLinks();
@@ -2255,7 +2358,7 @@ service cloud.firestore {
 
       unsubProducts = onSnapshot(productsColRef, async (querySnap) => {
         if (querySnap.empty) {
-          if (currentUser) {
+          if (!querySnap.metadata.fromCache && currentUser) {
             const currentStore = window.getStoreData();
             await pushAllProductsToFirestore(currentStore.products);
           }
@@ -2271,6 +2374,7 @@ service cloud.firestore {
 
         const currentStore = window.getStoreData();
         currentStore.products = loadedProducts;
+        window.saveToLocalCache();
         window.renderFeaturedSections();
         window.renderProducts();
         window.renderAdminProductsTable();
@@ -2297,7 +2401,7 @@ service cloud.firestore {
         }, { merge: true });
       } catch (err) {
         console.error("Error saving config to Firestore:", err);
-        window.showToast("Sila aktifkan Anonymous Auth di Firebase Console untuk simpan ke awan.", "error");
+        window.showToast("Sila semak tetapan Auth Firebase untuk simpan ke awan.", "error");
       }
     }
 
@@ -2312,7 +2416,7 @@ service cloud.firestore {
         }, { merge: true });
       } catch (err) {
         console.error("Error saving product to Firestore:", err);
-        window.showToast("Sila aktifkan Anonymous Auth di Firebase Console untuk simpan produk.", "error");
+        window.showToast("Sila semak tetapan Auth Firebase untuk simpan produk ke awan.", "error");
       }
     }
 
@@ -2360,6 +2464,8 @@ service cloud.firestore {
   <!-- MAIN JAVASCRIPT STORE ENGINE                                              -->
   <!-- ========================================================================= -->
   <script>
+    const LOCAL_CACHE_KEY = 'kinderklub_store_cache_v2';
+
     // Cute Non-Animal Educational Storybook SVG Collection
     const CATEGORY_SVG_ICONS = {
       book: {
@@ -2405,8 +2511,6 @@ service cloud.firestore {
         announcementText: "Instant PDF & App Access — Use code KINDER10 for extra bundle savings!",
         heroHeadline: 'Nurture Big Minds with <span class="text-brand-coral">Joyful Learning</span> <span class="text-brand-purple">Adventures!</span>',
         heroSubheadline: "Discover teacher-crafted interactive digital worksheets, phonics apps, Montessori busy packs, and STEM games in Malaysian Ringgit (RM). Instant digital downloads & ready-to-play apps!",
-        showHeroBanner: true,
-        heroBannerUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85",
         whatsappNumber: "60123456789",
         whatsappDefaultMsg: "Hi Kinder Klub! Saya berminat dengan bahan pembelajaran digital anak-anak.",
         showFloatingWhatsapp: true,
@@ -2443,8 +2547,6 @@ service cloud.firestore {
         heroSubheadline: "A safe, fun & nurturing digital learning world where children play, explore phonics, Montessori busy books, and math games every single day!",
         heroPrimaryCta: "Discover More",
         heroSecondaryCta: "Explore Topics",
-        heroBannerCaption: "Trusted by 3,200+ Happy Families",
-        heroBannerRating: "4.9/5",
         pillar1Title: "Play & Learn",
         pillar1Desc: "Fun interactive modules",
         pillar2Title: "Safe & Ad-Free",
@@ -2477,6 +2579,15 @@ service cloud.firestore {
         testimonialsHeading: "Loved by Parents & Teachers",
         faqBadge: "Got Questions?",
         faqHeading: "Frequently Asked Questions",
+        makeIncomeBadge: "AFFILIATE PROGRAM",
+        makeIncomeHeading: 'Make Income With <span class="text-[#F59E0B]">Kinder Klub</span>',
+        makeIncomeDesc: "Buy any products and join as affiliate and start growing your savings!",
+        makeIncomeTabletTitle: "Affiliate Klub",
+        makeIncomeTabletBadge: "Earn money even while you’re sleeping!",
+        makeIncomePill1: "High Commission More Than 70%",
+        makeIncomePill2: "Grow Your Savings",
+        makeIncomeCtaText: "Join Affiliate Now",
+        makeIncomeCtaUrl: "",
         phoneWelcomeSmall: "Welcome to",
         phoneWelcomeTitle: "Kinder Klub!",
         phoneBadgeText: "100% Digital • Instant PDF & Interactive Games",
@@ -2497,8 +2608,8 @@ service cloud.firestore {
         { id: "nav-bestselling", label: "Best Selling", href: "#bestselling-section", visible: true },
         { id: "nav-whatsnew", label: "What's New", href: "#whatsnew-section", visible: true },
         { id: "nav-products", label: "All Products", href: "#products-showcase", visible: true },
+        { id: "nav-income", label: "Make Income", href: "#make-income-section", visible: true },
         { id: "nav-categories", label: "Categories", href: "#categories-section", visible: true },
-        { id: "nav-reviews", label: "Parent Reviews", href: "#testimonials-section", visible: true },
         { id: "nav-faq", label: "FAQ", href: "#faq-section", visible: true }
       ],
       categories: [
@@ -2516,6 +2627,7 @@ service cloud.firestore {
         { id: "sec-bestselling", name: "Best Selling (Featured Products)", visible: true },
         { id: "sec-whatsnew", name: "What's New Showcase", visible: true },
         { id: "sec-products", name: "All Products Showcase", visible: true },
+        { id: "sec-make-income", name: "Make Income (Affiliate Program)", visible: true },
         { id: "sec-duitnow", name: "DuitNow & Instant Delivery Info", visible: true },
         { id: "sec-testimonials", name: "Parent Reviews & Testimonials", visible: true },
         { id: "sec-faq", name: "FAQ Accordion", visible: true }
@@ -2626,6 +2738,27 @@ service cloud.firestore {
     let activeFanIndex = 0;
 
     window.getStoreData = () => storeData;
+
+    function saveToLocalCache() {
+      try {
+        if (storeData) {
+          localStorage.setItem(LOCAL_CACHE_KEY, JSON.stringify(storeData));
+        }
+      } catch (e) {
+        console.warn("Local cache save skipped:", e);
+      }
+    }
+    window.saveToLocalCache = saveToLocalCache;
+
+    function loadFromLocalCache() {
+      try {
+        const raw = localStorage.getItem(LOCAL_CACHE_KEY);
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch (e) {
+        return null;
+      }
+    }
 
     // =========================================================================
     // STEALTH ADMIN ACCESS TRIGGERS (TRIPLE TAP LOGO / #admin / CTRL+SHIFT+A)
@@ -2753,27 +2886,35 @@ service cloud.firestore {
     }
 
     // =========================================================================
-    // INITIALIZATION & FIREBASE CLOUD PERSISTENCE
+    // INITIALIZATION & FIREBASE CLOUD + LOCAL CACHE PERSISTENCE
     // =========================================================================
     function initStoreData() {
-      if (!storeData) {
-        storeData = JSON.parse(JSON.stringify(DEFAULT_STORE_DATA));
+      const base = JSON.parse(JSON.stringify(DEFAULT_STORE_DATA));
+      const cached = loadFromLocalCache();
+
+      if (cached && typeof cached === 'object') {
+        storeData = {
+          settings: { ...base.settings, ...(cached.settings || {}) },
+          theme: { ...base.theme, ...(cached.theme || {}) },
+          copy: { ...base.copy, ...(cached.copy || {}) },
+          navigation: Array.isArray(cached.navigation) ? cached.navigation : base.navigation,
+          categories: Array.isArray(cached.categories) ? cached.categories : base.categories,
+          sections: Array.isArray(cached.sections) ? cached.sections : base.sections,
+          products: Array.isArray(cached.products) && cached.products.length > 0 ? cached.products : base.products,
+          testimonials: Array.isArray(cached.testimonials) ? cached.testimonials : base.testimonials,
+          faqs: Array.isArray(cached.faqs) ? cached.faqs : base.faqs
+        };
+      } else {
+        storeData = base;
       }
-      if (!storeData.theme) {
-        storeData.theme = JSON.parse(JSON.stringify(DEFAULT_STORE_DATA.theme));
-      }
-      if (!storeData.copy) {
-        storeData.copy = JSON.parse(JSON.stringify(DEFAULT_STORE_DATA.copy));
-      }
-      if (!Array.isArray(storeData.navigation)) {
-        storeData.navigation = JSON.parse(JSON.stringify(DEFAULT_STORE_DATA.navigation));
-      }
+
       if (!storeData.settings.adminPassword) {
         storeData.settings.adminPassword = "admin110708";
       }
     }
 
     async function persistStoreData(specificProduct = null, isConfigChange = true) {
+      saveToLocalCache();
       try {
         if (window.firebaseCloud) {
           if (specificProduct) {
@@ -2788,7 +2929,7 @@ service cloud.firestore {
         }
       } catch (e) {
         console.error("Cloud sync error:", e);
-        showToast("Perubahan dikemaskini dalam sesi ini.", "info");
+        showToast("Perubahan disimpan dalam memori pelayar.", "info");
       }
     }
 
@@ -3052,8 +3193,6 @@ service cloud.firestore {
       setText('hero-subheadline', c.heroSubheadline || storeData.settings.heroSubheadline);
       setText('hero-primary-cta-text', c.heroPrimaryCta);
       setText('hero-secondary-cta-text', c.heroSecondaryCta);
-      setText('hero-banner-caption', c.heroBannerCaption);
-      setText('hero-banner-rating', c.heroBannerRating);
 
       setText('pillar-1-title', c.pillar1Title);
       setText('pillar-1-desc', c.pillar1Desc);
@@ -3093,6 +3232,17 @@ service cloud.firestore {
       setText('faq-badge', c.faqBadge);
       setText('faq-heading', c.faqHeading);
 
+      // Make Income (Affiliate Program)
+      const incomeBadgeEl = document.querySelector('#make-income-badge span');
+      if (incomeBadgeEl && c.makeIncomeBadge) incomeBadgeEl.innerText = c.makeIncomeBadge;
+      setHtml('make-income-heading', c.makeIncomeHeading);
+      setText('make-income-desc', c.makeIncomeDesc);
+      setText('make-income-tablet-title', c.makeIncomeTabletTitle);
+      setText('make-income-tablet-badge', c.makeIncomeTabletBadge);
+      setText('make-income-pill-1', c.makeIncomePill1);
+      setText('make-income-pill-2', c.makeIncomePill2);
+      setText('make-income-cta-text', c.makeIncomeCtaText);
+
       setText('phone-welcome-small', c.phoneWelcomeSmall);
       setText('phone-welcome-title', c.phoneWelcomeTitle);
       setText('phone-badge-text', c.phoneBadgeText);
@@ -3108,6 +3258,8 @@ service cloud.firestore {
       setText('bottom-strip-3', c.bottomStrip3);
       setText('bottom-strip-4', c.bottomStrip4);
       setText('footer-desc-text', c.footerDesc);
+
+      setupWhatsAppLinks();
     }
 
     function populateCopywritingInputs() {
@@ -3121,8 +3273,6 @@ service cloud.firestore {
       document.getElementById('copy-hero-subheadline').value = c.heroSubheadline || storeData.settings.heroSubheadline || "";
       document.getElementById('copy-hero-cta1').value = c.heroPrimaryCta || "";
       document.getElementById('copy-hero-cta2').value = c.heroSecondaryCta || "";
-      document.getElementById('copy-hero-banner-caption').value = c.heroBannerCaption || "";
-      document.getElementById('copy-hero-banner-rating').value = c.heroBannerRating || "";
 
       document.getElementById('copy-p1-title').value = c.pillar1Title || "";
       document.getElementById('copy-p1-desc').value = c.pillar1Desc || "";
@@ -3157,6 +3307,17 @@ service cloud.firestore {
       document.getElementById('copy-prod-heading').value = c.productsHeading || "";
       document.getElementById('copy-prod-btn').value = c.productCardButton || "";
       document.getElementById('copy-prod-search').value = c.productsSearchPlaceholder || "";
+
+      // Make Income inputs
+      document.getElementById('copy-income-badge').value = c.makeIncomeBadge || "";
+      document.getElementById('copy-income-heading').value = c.makeIncomeHeading || "";
+      document.getElementById('copy-income-desc').value = c.makeIncomeDesc || "";
+      document.getElementById('copy-income-tablet-title').value = c.makeIncomeTabletTitle || "";
+      document.getElementById('copy-income-tablet-badge').value = c.makeIncomeTabletBadge || "";
+      document.getElementById('copy-income-pill1').value = c.makeIncomePill1 || "";
+      document.getElementById('copy-income-pill2').value = c.makeIncomePill2 || "";
+      document.getElementById('copy-income-cta-text').value = c.makeIncomeCtaText || "";
+      document.getElementById('copy-income-cta-url').value = c.makeIncomeCtaUrl || "";
 
       document.getElementById('copy-stay-heading').value = c.stayConnectedHeading || "";
       document.getElementById('copy-stay-desc').value = c.stayConnectedDesc || "";
@@ -3222,8 +3383,6 @@ service cloud.firestore {
         heroSubheadline: document.getElementById('copy-hero-subheadline').value.trim(),
         heroPrimaryCta: document.getElementById('copy-hero-cta1').value.trim() || "Discover More",
         heroSecondaryCta: document.getElementById('copy-hero-cta2').value.trim() || "Explore Topics",
-        heroBannerCaption: document.getElementById('copy-hero-banner-caption').value.trim(),
-        heroBannerRating: document.getElementById('copy-hero-banner-rating').value.trim(),
         pillar1Title: document.getElementById('copy-p1-title').value.trim(),
         pillar1Desc: document.getElementById('copy-p1-desc').value.trim(),
         pillar2Title: document.getElementById('copy-p2-title').value.trim(),
@@ -3252,6 +3411,15 @@ service cloud.firestore {
         productsHeading: document.getElementById('copy-prod-heading').value.trim(),
         productCardButton: document.getElementById('copy-prod-btn').value.trim() || "VIEW PRODUCT",
         productsSearchPlaceholder: document.getElementById('copy-prod-search').value.trim(),
+        makeIncomeBadge: document.getElementById('copy-income-badge').value.trim() || "AFFILIATE PROGRAM",
+        makeIncomeHeading: document.getElementById('copy-income-heading').value.trim() || 'Make Income With <span class="text-[#F59E0B]">Kinder Klub</span>',
+        makeIncomeDesc: document.getElementById('copy-income-desc').value.trim() || "Buy any products and join as affiliate and start growing your savings!",
+        makeIncomeTabletTitle: document.getElementById('copy-income-tablet-title').value.trim() || "Affiliate Klub",
+        makeIncomeTabletBadge: document.getElementById('copy-income-tablet-badge').value.trim() || "Earn money even while you’re sleeping!",
+        makeIncomePill1: document.getElementById('copy-income-pill1').value.trim() || "High Commission More Than 70%",
+        makeIncomePill2: document.getElementById('copy-income-pill2').value.trim() || "Grow Your Savings",
+        makeIncomeCtaText: document.getElementById('copy-income-cta-text').value.trim() || "Join Affiliate Now",
+        makeIncomeCtaUrl: document.getElementById('copy-income-cta-url').value.trim(),
         stayConnectedHeading: document.getElementById('copy-stay-heading').value.trim(),
         stayConnectedDesc: document.getElementById('copy-stay-desc').value.trim(),
         inquiryCardTitle: document.getElementById('copy-inquiry-title').value.trim(),
@@ -3279,21 +3447,6 @@ service cloud.firestore {
       document.getElementById('footer-brand-first').innerText = s.brandFirst || "KINDER";
       document.getElementById('footer-brand-second').innerText = s.brandSecond || "KLUB";
       document.getElementById('header-tagline').innerText = s.tagline || "KIDS LEARNING CENTER";
-      document.getElementById('hero-banner-img').src = s.heroBannerUrl;
-
-      // Enable / Disable Hero Banner Image Container
-      const showBanner = s.showHeroBanner !== false;
-      const bannerCol = document.getElementById('hero-banner-col');
-      const copyCol = document.getElementById('hero-copy-col');
-      if (bannerCol) {
-        if (showBanner) {
-          bannerCol.classList.remove('hidden');
-          if (copyCol) copyCol.className = 'lg:col-span-6 relative';
-        } else {
-          bannerCol.classList.add('hidden');
-          if (copyCol) copyCol.className = 'lg:col-span-8 lg:col-start-3 relative';
-        }
-      }
 
       const logoImg = document.getElementById('header-logo-img');
       const logoDefault = document.getElementById('header-logo-default');
@@ -3332,6 +3485,7 @@ service cloud.firestore {
         'sec-bestselling': 'bestselling-section',
         'sec-whatsnew': 'whatsnew-section',
         'sec-products': 'products-showcase',
+        'sec-make-income': 'make-income-section',
         'sec-duitnow': 'duitnow-info-section',
         'sec-testimonials': 'testimonials-section',
         'sec-faq': 'faq-section'
@@ -3352,9 +3506,6 @@ service cloud.firestore {
         document.getElementById('setting-announcement-text').value = s.announcementText || "";
         document.getElementById('setting-hero-headline').value = s.heroHeadline || "";
         document.getElementById('setting-hero-subheadline').value = s.heroSubheadline || "";
-        document.getElementById('setting-hero-banner').value = s.heroBannerUrl || "";
-        const showBannerSelect = document.getElementById('setting-show-hero-banner');
-        if (showBannerSelect) showBannerSelect.value = String(showBanner);
         document.getElementById('setting-whatsapp-number').value = s.whatsappNumber || "";
         document.getElementById('setting-whatsapp-default-msg').value = s.whatsappDefaultMsg || "";
         document.getElementById('setting-default-duitnow-qr').value = s.defaultDuitnowQrUrl || "";
@@ -3534,12 +3685,20 @@ service cloud.firestore {
     }
     window.renderFeaturedSections = renderFeaturedSections;
 
-    function sendQuickWhatsAppInquiry() {
-      const parentName = document.getElementById('quick-parent-name')?.value.trim() || "Parent";
-      const childAge = document.getElementById('quick-child-age')?.value.trim() || "2-6 tahun";
+    function updateQuickInquiryWhatsappHref() {
+      const linkEl = document.getElementById('inquiry-whatsapp-btn');
+      if (!linkEl || !storeData) return;
+      const parentName = document.getElementById('quick-parent-name')?.value.trim();
+      const childAge = document.getElementById('quick-child-age')?.value.trim();
       const num = (storeData.settings.whatsappNumber || "60123456789").replace(/[^0-9]/g, '');
-      const text = encodeURIComponent(`Hi Kinder Klub! Nama saya ${parentName}. Saya nak tanya cadangan bahan pembelajaran untuk anak umur ${childAge}.`);
-      window.open(`https://wa.me/${num}?text=${text}`, '_blank');
+
+      let message = "";
+      if (parentName || childAge) {
+        message = `Hi Kinder Klub! Nama saya ${parentName || 'Parent'}. Saya nak tanya cadangan bahan pembelajaran yang sesuai untuk anak umur ${childAge || '2-7 tahun'}.`;
+      } else {
+        message = storeData.settings.whatsappDefaultMsg || "Hi Kinder Klub! Saya nak tanya cadangan bahan pembelajaran untuk anak saya.";
+      }
+      linkEl.href = `https://wa.me/${num}?text=${encodeURIComponent(message)}`;
     }
 
     function filterByCategory(catId) {
@@ -3640,6 +3799,7 @@ service cloud.firestore {
     }
 
     function setupWhatsAppLinks() {
+      if (!storeData) return;
       const num = (storeData.settings.whatsappNumber || "60123456789").replace(/[^0-9]/g, '');
       const msg = encodeURIComponent(storeData.settings.whatsappDefaultMsg || "Hi Kinder Klub!");
       const waUrl = `https://wa.me/${num}?text=${msg}`;
@@ -3648,6 +3808,19 @@ service cloud.firestore {
         const el = document.getElementById(id);
         if (el) el.href = waUrl;
       });
+
+      const affiliateBtn = document.getElementById('make-income-cta-btn');
+      if (affiliateBtn) {
+        const customAffiliateUrl = (storeData.copy && storeData.copy.makeIncomeCtaUrl || "").trim();
+        if (customAffiliateUrl) {
+          affiliateBtn.href = customAffiliateUrl;
+        } else {
+          const affMsg = encodeURIComponent("Hi Kinder Klub! Saya berminat untuk beli produk & daftar sebagai Affiliate supaya dapat mula jana pendapatan simpanan!");
+          affiliateBtn.href = `https://wa.me/${num}?text=${affMsg}`;
+        }
+      }
+
+      updateQuickInquiryWhatsappHref();
     }
     window.setupWhatsAppLinks = setupWhatsAppLinks;
 
@@ -4025,6 +4198,7 @@ service cloud.firestore {
         item.sortOrder = i;
       });
 
+      saveToLocalCache();
       renderAdminProductsTable();
       renderFeaturedSections();
       renderProducts();
@@ -4153,6 +4327,7 @@ service cloud.firestore {
         };
         storeData.products.unshift(savedProd);
         storeData.products.forEach((item, i) => { item.sortOrder = i; });
+        saveToLocalCache();
         if (window.firebaseCloud) {
           await window.firebaseCloud.saveAllProducts(storeData.products);
           showToast("Produk baru ditambah & disimpan!", "success");
@@ -4175,6 +4350,7 @@ service cloud.firestore {
       const confirmed = await showCustomConfirm("Padam Produk", `Adakah anda pasti mahu memadam "${prod.title}"?`);
       if (confirmed) {
         storeData.products = storeData.products.filter(p => p.id !== productId);
+        saveToLocalCache();
         if (window.firebaseCloud) {
           await window.firebaseCloud.deleteProduct(productId);
         }
@@ -4455,21 +4631,7 @@ service cloud.firestore {
 
     function renderAdminSectionsList() {
       const list = document.getElementById('admin-sections-list');
-      const heroImgEnabled = storeData.settings.showHeroBanner !== false;
-
-      const heroImageToggleCard = `
-        <div class="bg-sky-50 p-3.5 rounded-2xl border-2 border-sky-200 flex items-center justify-between gap-2">
-          <div>
-            <div class="text-xs font-black text-[#16325C]">Kotak Gambar Banner Hero (Gambar Apple / Ilustrasi)</div>
-            <div class="text-[11px] font-semibold text-gray-500">Kawal paparan kotak gambar di bawah tajuk Hero</div>
-          </div>
-          <button onclick="toggleHeroBannerImageVisibility()" class="px-3.5 py-1.5 rounded-xl text-xs font-black shrink-0 ${heroImgEnabled ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}">
-            ${heroImgEnabled ? 'Enabled (Papar)' : 'Disabled (Sembunyi)'}
-          </button>
-        </div>
-      `;
-
-      const sectionsHtml = (storeData.sections || []).map(sec => `
+      list.innerHTML = (storeData.sections || []).map(sec => `
         <div class="bg-white p-3.5 rounded-2xl border border-gray-200 flex items-center justify-between">
           <span class="text-xs font-extrabold text-brand-dark">${sec.name}</span>
           <button onclick="toggleSectionVisibility('${sec.id}')" class="px-3.5 py-1.5 rounded-xl text-xs font-black ${sec.visible ? 'bg-green-100 text-green-700' : 'bg-gray-200 text-gray-600'}">
@@ -4477,15 +4639,6 @@ service cloud.firestore {
           </button>
         </div>
       `).join('');
-
-      list.innerHTML = heroImageToggleCard + sectionsHtml;
-    }
-
-    async function toggleHeroBannerImageVisibility() {
-      storeData.settings.showHeroBanner = !(storeData.settings.showHeroBanner !== false);
-      applyBrandSettings();
-      renderAdminSectionsList();
-      await persistStoreData(null, true);
     }
 
     async function toggleSectionVisibility(secId) {
@@ -4508,11 +4661,9 @@ service cloud.firestore {
       s.brandSecond = document.getElementById('setting-brand-second').value.trim() || "KLUB";
       s.tagline = document.getElementById('setting-tagline').value.trim();
       s.logoUrl = document.getElementById('setting-logo-url').value.trim();
-      s.showHeroBanner = document.getElementById('setting-show-hero-banner').value === 'true';
       s.announcementText = document.getElementById('setting-announcement-text').value.trim();
       s.heroHeadline = document.getElementById('setting-hero-headline').value.trim();
       s.heroSubheadline = document.getElementById('setting-hero-subheadline').value.trim();
-      s.heroBannerUrl = document.getElementById('setting-hero-banner').value.trim();
 
       applyBrandSettings();
       renderAdminSectionsList();
@@ -4539,11 +4690,13 @@ service cloud.firestore {
       await persistStoreData(null, true);
     }
 
-    function testWhatsappConnection() {
+    function updateTestWhatsappLink() {
+      const btn = document.getElementById('test-whatsapp-btn');
+      if (!btn) return;
       const raw = document.getElementById('setting-whatsapp-number').value.trim() || storeData.settings.whatsappNumber;
       const num = raw.replace(/[^0-9]/g, '');
       const msg = encodeURIComponent(document.getElementById('setting-whatsapp-default-msg').value.trim() || "Hi Kinder Klub!");
-      window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+      btn.href = `https://wa.me/${num}?text=${msg}`;
     }
 
     // -------------------------------------------------------------------------
@@ -4569,6 +4722,7 @@ service cloud.firestore {
     }
 
     async function forcePushAllToFirebase() {
+      saveToLocalCache();
       if (!window.firebaseCloud) return;
       await window.firebaseCloud.saveConfig(storeData);
       await window.firebaseCloud.saveAllProducts(storeData.products);
@@ -4609,6 +4763,7 @@ service cloud.firestore {
           const imported = JSON.parse(e.target.result);
           if (imported.products && imported.settings) {
             storeData = imported;
+            saveToLocalCache();
             await persistStoreData(null, true);
             if (window.firebaseCloud) {
               await window.firebaseCloud.saveAllProducts(storeData.products);
@@ -4630,6 +4785,7 @@ service cloud.firestore {
       const confirmed = await showCustomConfirm("Pulihkan Data Asal", "Pulihkan semua produk dan tetapan kepada data asal?");
       if (confirmed) {
         storeData = JSON.parse(JSON.stringify(DEFAULT_STORE_DATA));
+        saveToLocalCache();
         await persistStoreData(null, true);
         if (window.firebaseCloud) {
           await window.firebaseCloud.saveAllProducts(storeData.products);
