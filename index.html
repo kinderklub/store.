@@ -413,7 +413,7 @@
   <!-- ========================================================================= -->
   <main class="flex-1">
 
-    <!-- 1. HERO SECTION (ROYAL BLUE SKY + FLUFFY CLOUD CARD + CUTE OBJECT SVGs) -->
+    <!-- 1. HERO SECTION (ROYAL BLUE SKY + FLUFFY CLOUD CARD + OPTIONAL HERO BANNER) -->
     <section id="home" class="relative bg-gradient-to-b from-[#0E7AE6] via-[#1C8EF9] to-[#48AAFF] pt-6 pb-24 sm:pt-10 sm:pb-32 overflow-hidden">
 
       <!-- Twinkling Stars & Clouds Decoration (Cute SVGs) -->
@@ -426,10 +426,10 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+        <div id="hero-main-grid" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
 
           <!-- Left Fluffy Cloud Copy Container -->
-          <div class="lg:col-span-6 relative">
+          <div id="hero-copy-col" class="lg:col-span-6 relative">
             <div class="bg-white rounded-[40px] sm:rounded-[48px] p-6 sm:p-9 shadow-2xl border-4 border-white/80 relative">
               <!-- Decorative Little Cloud Bump Top-Right -->
               <div class="hidden sm:block -top-6 right-12 w-20 h-12 bg-white rounded-full absolute pointer-events-none"></div>
@@ -466,17 +466,12 @@
             <!-- Cute 3D Smiling Space Rocket SVG Peeking Bottom-Left (Non-Animal) -->
             <div class="hidden sm:block w-24 h-24 -bottom-12 -left-4 absolute z-20 animate-float-slow pointer-events-none drop-shadow-xl">
               <svg viewBox="0 0 120 120" class="w-full h-full">
-                <!-- Rocket Flame -->
                 <path d="M46 92c0 12 14 20 14 20s14-8 14-20c0-6-6-10-14-10s-14 4-14 10z" fill="#FF6F00" stroke="#16325C" stroke-width="3"/>
                 <path d="M52 91c0 7 8 12 8 12s8-5 8-12c0-4-4-6-8-6s-8 2-8 6z" fill="#FFCA28"/>
-                <!-- Side Fins -->
                 <path d="M36 66L18 84l20 4z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
                 <path d="M84 66l18 18-20 4z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
-                <!-- Rocket Body -->
                 <path d="M60 12c-18 16-24 40-24 68h48c0-28-6-52-24-68z" fill="#FFFFFF" stroke="#16325C" stroke-width="3.5" stroke-linejoin="round"/>
-                <!-- Nose Cone -->
                 <path d="M60 12c-8 7-13 16-16 26h32c-3-10-8-19-16-26z" fill="#FF4D6D" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
-                <!-- Cute Porthole Window -->
                 <circle cx="60" cy="56" r="14" fill="#38BDF8" stroke="#16325C" stroke-width="3"/>
                 <circle cx="55" cy="54" r="2.2" fill="#16325C"/>
                 <circle cx="65" cy="54" r="2.2" fill="#16325C"/>
@@ -485,17 +480,15 @@
             </div>
           </div>
 
-          <!-- Right Storybook Cloud-Framed Illustration -->
-          <div class="lg:col-span-6 relative">
+          <!-- Right Storybook Cloud-Framed Illustration (Enable / Disable Controlled) -->
+          <div id="hero-banner-col" class="lg:col-span-6 relative">
             <!-- Cute Smiling Rainbow & Fluffy Cloud SVG Peeking Top-Right (Non-Animal) -->
             <div class="hidden sm:block w-28 h-24 -top-8 -right-3 absolute z-20 animate-float-reverse pointer-events-none drop-shadow-xl">
               <svg viewBox="0 0 130 110" class="w-full h-full">
-                <!-- Rainbow Arcs -->
                 <path d="M24 72a41 41 0 0 1 82 0" fill="none" stroke="#FF4D6D" stroke-width="9" stroke-linecap="round"/>
                 <path d="M33 72a32 32 0 0 1 64 0" fill="none" stroke="#FFCA28" stroke-width="9" stroke-linecap="round"/>
                 <path d="M42 72a23 23 0 0 1 46 0" fill="none" stroke="#4ADE80" stroke-width="9" stroke-linecap="round"/>
                 <path d="M51 72a14 14 0 0 1 28 0" fill="none" stroke="#38BDF8" stroke-width="9" stroke-linecap="round"/>
-                <!-- Fluffy Smiling Cloud -->
                 <path d="M26 86h78a14 14 0 0 0 0-28 18 18 0 0 0-34-6 16 16 0 0 0-30 8 13 13 0 0 0-14 26z" fill="#FFFFFF" stroke="#16325C" stroke-width="3" stroke-linejoin="round"/>
                 <circle cx="56" cy="72" r="2.5" fill="#16325C"/>
                 <circle cx="74" cy="72" r="2.5" fill="#16325C"/>
@@ -508,7 +501,6 @@
                 <img id="hero-banner-img" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85" alt="Kinder Klub Learning" class="w-full h-full object-cover" />
                 <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-full shadow-lg flex items-center justify-between gap-2">
                   <div class="flex items-center space-x-2 min-w-0">
-                    <!-- Cute Smiling School Bus SVG -->
                     <svg viewBox="0 0 36 36" class="w-6 h-6 shrink-0">
                       <rect x="4" y="9" width="28" height="17" rx="5" fill="#FFCA28" stroke="#16325C" stroke-width="2"/>
                       <rect x="8" y="12" width="6" height="6" rx="1.5" fill="#E0F2FE" stroke="#16325C" stroke-width="1.5"/>
@@ -766,7 +758,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
-          <!-- Left Phone Preview Mockup (Cute Smiling Magic Star Trophy SVG — No Animals) -->
+          <!-- Left Phone Preview Mockup -->
           <div class="lg:col-span-4 flex justify-center">
             <div class="w-60 bg-[#16325C] p-2.5 rounded-[38px] shadow-2xl border-4 border-sky-200 transform -rotate-2">
               <div class="bg-gradient-to-b from-[#0E7AE6] to-[#48AAFF] rounded-[30px] p-5 text-center text-white space-y-3">
@@ -774,7 +766,6 @@
                 <div id="phone-welcome-small" class="text-xs font-black text-[#FFCA28] uppercase tracking-wider">Welcome to</div>
                 <div id="phone-welcome-title" class="brand-font text-2xl font-black leading-tight">Kinder Klub!</div>
                 <div class="w-24 h-24 mx-auto bg-white/25 rounded-full flex items-center justify-center p-3 shadow-inner">
-                  <!-- Cute Smiling Golden Star & Graduation Cap SVG -->
                   <svg viewBox="0 0 100 100" class="w-full h-full">
                     <path d="M50 14l11.2 22.7 25 3.6-18.1 17.6 4.3 24.9L50 71l-22.4 11.8 4.3-24.9-18.1-17.6 25-3.6z" fill="#FFCA28" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/>
                     <circle cx="42" cy="49" r="3.5" fill="#16325C"/>
@@ -1833,7 +1824,7 @@
             <div id="tab-sections" class="hidden space-y-5">
               <div>
                 <h3 class="brand-font text-xl font-black text-brand-dark">Seksyen Halaman Utama</h3>
-                <p class="text-xs text-gray-500">Kawal seksyen mana yang dipaparkan atau disembunyikan pada laman utama kedai anda.</p>
+                <p class="text-xs text-gray-500">Kawal bahagian mana yang dipaparkan atau disembunyikan pada laman utama kedai anda (termasuk Kotak Gambar Banner Hero).</p>
               </div>
               <div id="admin-sections-list" class="space-y-2">
                 <!-- Rendered dynamically -->
@@ -1860,6 +1851,30 @@
                 <input type="text" id="setting-logo-url" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 text-xs font-bold" placeholder="URL logo tersuai (kosongkan untuk kekal guna ikon asal Kinder Klub)" />
               </div>
 
+              <!-- Hero Banner Image Enable / Disable + Upload -->
+              <div class="bg-sky-50/70 p-4 rounded-2xl border-2 border-sky-200 space-y-3 text-xs">
+                <div class="font-black uppercase text-[#0E7AE6]">Kotak Gambar Banner Hero (Gambar Apple / Ilustrasi Utama)</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block font-bold mb-1">Status Kotak Gambar Banner Hero</label>
+                    <select id="setting-show-hero-banner" class="w-full p-2.5 bg-white rounded-xl border border-gray-300 font-bold">
+                      <option value="true">Enable — Papar Gambar Banner Hero</option>
+                      <option value="false">Disable — Sembunyikan Gambar Banner Hero</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block font-bold mb-1">Gambar Banner Hero (Upload atau URL)</label>
+                    <div class="flex gap-2">
+                      <input type="text" id="setting-hero-banner" class="flex-1 p-2.5 bg-white rounded-xl border border-gray-300 font-bold" />
+                      <label class="px-3.5 py-2.5 bg-brand-sky text-white rounded-xl font-black cursor-pointer shrink-0 flex items-center gap-1">
+                        <i class="fa-solid fa-upload"></i> Upload
+                        <input type="file" accept="image/*" onchange="handleImageUploadToInput(event, 'setting-hero-banner', false)" class="hidden" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
                 <div>
                   <label class="block font-bold mb-1">Nama Jenama (Bahagian 1)</label>
@@ -1884,16 +1899,6 @@
                 <div class="sm:col-span-2">
                   <label class="block font-bold mb-1">Sub-tajuk Hero</label>
                   <textarea id="setting-hero-subheadline" rows="2" class="w-full p-2.5 bg-gray-50 rounded-xl border border-gray-300 font-bold"></textarea>
-                </div>
-                <div class="sm:col-span-2">
-                  <label class="block font-bold mb-1">Gambar Banner Hero (Upload atau URL)</label>
-                  <div class="flex gap-2">
-                    <input type="text" id="setting-hero-banner" class="flex-1 p-2.5 bg-gray-50 rounded-xl border border-gray-300 font-bold" />
-                    <label class="px-3.5 py-2.5 bg-brand-sky text-white rounded-xl font-black cursor-pointer shrink-0 flex items-center gap-1">
-                      <i class="fa-solid fa-upload"></i> Upload
-                      <input type="file" accept="image/*" onchange="handleImageUploadToInput(event, 'setting-hero-banner', false)" class="hidden" />
-                    </label>
-                  </div>
                 </div>
               </div>
               <button onclick="saveAppearanceSettings()" class="btn-3d px-6 py-3 bg-brand-purple text-white rounded-2xl text-xs font-black">
@@ -2311,6 +2316,7 @@ service cloud.firestore {
         announcementText: "Instant PDF & App Access — Use code KINDER10 for extra bundle savings!",
         heroHeadline: 'Nurture Big Minds with <span class="text-brand-coral">Joyful Learning</span> <span class="text-brand-purple">Adventures!</span>',
         heroSubheadline: "Discover teacher-crafted interactive digital worksheets, phonics apps, Montessori busy packs, and STEM games in Malaysian Ringgit (RM). Instant digital downloads & ready-to-play apps!",
+        showHeroBanner: true,
         heroBannerUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85",
         whatsappNumber: "60123456789",
         whatsappDefaultMsg: "Hi Kinder Klub! Saya berminat dengan bahan pembelajaran digital anak-anak.",
@@ -3148,6 +3154,20 @@ service cloud.firestore {
       document.getElementById('header-tagline').innerText = s.tagline || "KIDS LEARNING CENTER";
       document.getElementById('hero-banner-img').src = s.heroBannerUrl;
 
+      // Enable / Disable Hero Banner Image Container
+      const showBanner = s.showHeroBanner !== false;
+      const bannerCol = document.getElementById('hero-banner-col');
+      const copyCol = document.getElementById('hero-copy-col');
+      if (bannerCol) {
+        if (showBanner) {
+          bannerCol.classList.remove('hidden');
+          if (copyCol) copyCol.className = 'lg:col-span-6 relative';
+        } else {
+          bannerCol.classList.add('hidden');
+          if (copyCol) copyCol.className = 'lg:col-span-8 lg:col-start-3 relative';
+        }
+      }
+
       const logoImg = document.getElementById('header-logo-img');
       const logoDefault = document.getElementById('header-logo-default');
       if (s.logoUrl && s.logoUrl.trim() !== "") {
@@ -3204,6 +3224,8 @@ service cloud.firestore {
         document.getElementById('setting-hero-headline').value = s.heroHeadline || "";
         document.getElementById('setting-hero-subheadline').value = s.heroSubheadline || "";
         document.getElementById('setting-hero-banner').value = s.heroBannerUrl || "";
+        const showBannerSelect = document.getElementById('setting-show-hero-banner');
+        if (showBannerSelect) showBannerSelect.value = String(showBanner);
         document.getElementById('setting-whatsapp-number').value = s.whatsappNumber || "";
         document.getElementById('setting-whatsapp-default-msg').value = s.whatsappDefaultMsg || "";
         document.getElementById('setting-default-duitnow-qr').value = s.defaultDuitnowQrUrl || "";
@@ -4131,7 +4153,7 @@ service cloud.firestore {
     }
 
     // -------------------------------------------------------------------------
-    // ADMIN: NAVIGATION & SECTIONS
+    // ADMIN: NAVIGATION & SECTIONS (INCLUDING HERO BANNER IMAGE TOGGLE)
     // -------------------------------------------------------------------------
     function renderAdminNavigationList() {
       const list = document.getElementById('admin-navigation-list');
@@ -4199,7 +4221,21 @@ service cloud.firestore {
 
     function renderAdminSectionsList() {
       const list = document.getElementById('admin-sections-list');
-      list.innerHTML = (storeData.sections || []).map(sec => `
+      const heroImgEnabled = storeData.settings.showHeroBanner !== false;
+
+      const heroImageToggleCard = `
+        <div class="bg-sky-50 p-3.5 rounded-2xl border-2 border-sky-200 flex items-center justify-between gap-2">
+          <div>
+            <div class="text-xs font-black text-[#16325C]">Kotak Gambar Banner Hero (Gambar Apple / Ilustrasi)</div>
+            <div class="text-[11px] font-semibold text-gray-500">Kawal paparan kotak gambar di bawah tajuk Hero</div>
+          </div>
+          <button onclick="toggleHeroBannerImageVisibility()" class="px-3.5 py-1.5 rounded-xl text-xs font-black shrink-0 ${heroImgEnabled ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}">
+            ${heroImgEnabled ? 'Enabled (Papar)' : 'Disabled (Sembunyi)'}
+          </button>
+        </div>
+      `;
+
+      const sectionsHtml = (storeData.sections || []).map(sec => `
         <div class="bg-white p-3.5 rounded-2xl border border-gray-200 flex items-center justify-between">
           <span class="text-xs font-extrabold text-brand-dark">${sec.name}</span>
           <button onclick="toggleSectionVisibility('${sec.id}')" class="px-3.5 py-1.5 rounded-xl text-xs font-black ${sec.visible ? 'bg-green-100 text-green-700' : 'bg-gray-200 text-gray-600'}">
@@ -4207,6 +4243,15 @@ service cloud.firestore {
           </button>
         </div>
       `).join('');
+
+      list.innerHTML = heroImageToggleCard + sectionsHtml;
+    }
+
+    async function toggleHeroBannerImageVisibility() {
+      storeData.settings.showHeroBanner = !(storeData.settings.showHeroBanner !== false);
+      applyBrandSettings();
+      renderAdminSectionsList();
+      await persistStoreData(null, true);
     }
 
     async function toggleSectionVisibility(secId) {
@@ -4228,12 +4273,14 @@ service cloud.firestore {
       s.brandSecond = document.getElementById('setting-brand-second').value.trim() || "KLUB";
       s.tagline = document.getElementById('setting-tagline').value.trim();
       s.logoUrl = document.getElementById('setting-logo-url').value.trim();
+      s.showHeroBanner = document.getElementById('setting-show-hero-banner').value === 'true';
       s.announcementText = document.getElementById('setting-announcement-text').value.trim();
       s.heroHeadline = document.getElementById('setting-hero-headline').value.trim();
       s.heroSubheadline = document.getElementById('setting-hero-subheadline').value.trim();
       s.heroBannerUrl = document.getElementById('setting-hero-banner').value.trim();
 
       applyBrandSettings();
+      renderAdminSectionsList();
       await persistStoreData(null, true);
     }
 
